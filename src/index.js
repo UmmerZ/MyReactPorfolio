@@ -5,12 +5,14 @@ import HomePage from "./components/HomePage"
 import Navbar from "./components/Navbar"
 import Skills from "./components/skills/Skills"
 
+import Routes from "./components/Route"
+import { BrowserRouter } from "react-router-dom"
+import App from "./App"
+
 ReactDOM.render(
-  <>
-    <Navbar />
-    <HomePage />
-    <Skills />
-  </>,
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
   document.getElementById("root")
 )
 
