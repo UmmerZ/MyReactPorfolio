@@ -1,14 +1,18 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core"
 import Lion from "./images/lion.jpg"
+import Universe from './images/universe.jpg'
 import Navbar from "./Navbar"
 import Skills from "./skills/Skills"
+import Projects from "./Projects"
 
 export default function HomePage() {
   const useStyle = makeStyles(theme => ({
     diagonalbox: {
       position: "relative",
-      backgroundImage: "linear-gradient(45deg, #171717, #292A29)",
+      backgroundImage: `url(${Universe})`,
+      backgroundSize: 'cover',
+      backgroundPosition:'center',
       transform: "skewY(-11deg)",
       height: "20em",
       marginTop: "5em",
@@ -27,23 +31,40 @@ export default function HomePage() {
     content2: {
       width: "50%",
       color: "#ffffff",
-      background: "#A006F2",
+      background: "MediumSeaGreen",
       height: "100%",
       float: "left",
-      paddingTop: "50px",
+     
     },
     content3: {
       width: "50%",
       color: "#7B7F7C",
       background: "black",
-      height: "20em",
+      height: "100%",
       float: "right",
     },
+   
+
+  
     title: {
       maxWidth: "80%",
       margin: "20px 20px 20px 20px",
+      overflow:'hidden',
       padding: "10px",
+      animation:'$textanimation 5s infinite'
+}, 
+"@keyframes textanimation" :{
+    from:{
+        opacity: '0'
     },
+    to:{
+        opacity: '1px'
+    },
+},
+"@keyframes animatedcursor":{
+    from:{ border: 'rgba(0,255,0,.75)'},
+    to:{border: 'transparent'},
+},
     image: { width: "100%", height: "80%" },
   }))
   const classes = useStyle()
@@ -65,6 +86,7 @@ export default function HomePage() {
         </div>
       </div>
       <Skills />
+      <Projects />
     </div>
   )
 }

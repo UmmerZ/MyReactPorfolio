@@ -14,13 +14,14 @@ export default function Navbar() {
   const useStyle = makeStyles(theme => ({
     buttons: {
       alignItems: "center",
-      borderRadius: "25px",
+      margin: '0 10px 0 5px',
+      marginRight: '10px',
       "&:hover": {
         backgroundColor: "grey",
       },
     },
     navbar: {
-      backgroundColor: "#A006F2",
+      backgroundColor: "MediumSeaGreen",
     },
     scrolled: {
       position: "fixed",

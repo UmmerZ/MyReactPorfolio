@@ -21,7 +21,7 @@ export default function Skills() {
       paddingTop: "10px",
       color: "#7B7F7C",
       transform: "skewY(11deg)",
-      backgroundColor: "#A006F2",
+      backgroundColor: "#e9ecf2",
       height: "25em",
       justifyContent: "center",
       alignItems: "center",
@@ -35,8 +35,8 @@ export default function Skills() {
     content2: {
       display: "block",
       width: "80%",
-      color: "#ffffff",
-      backgroundColor: "#A006F2",
+      color: "#323336",
+      backgroundColor: "#e9ecf2",
       height: "100%",
       justifyContent: "center",
       alignItems: "center",
@@ -332,7 +332,7 @@ export default function Skills() {
               <Button
                 onClick={() => setclick(1)}
                 className={classes.button1}
-                variant="h6"
+                variant="contained"
                 color="inherit"
               >
                 <p className={classes.h3}>JavaScript</p>
@@ -340,7 +340,7 @@ export default function Skills() {
               <Button
                 onClick={() => setclick(2)}
                 className={classes.button2}
-                variant="h6"
+                variant="contained"
                 color="inherit"
               >
                 <p className={classes.h3}>ReactJS</p>
@@ -348,7 +348,7 @@ export default function Skills() {
               <Button
                 onClick={() => setclick(3)}
                 className={classes.button1}
-                variant="h6"
+                variant="contained"
                 color="inherit"
               >
                 <p className={classes.h3}>C#</p>
@@ -356,7 +356,7 @@ export default function Skills() {
               <Button
                 onClick={() => setclick(5)}
                 className={classes.button1}
-                variant="h6"
+                variant="contained"
                 color="inherit"
               >
                 <p className={classes.h3}>Graphql</p>
@@ -364,7 +364,7 @@ export default function Skills() {
               <Button
                 onClick={() => setclick(9)}
                 className={classes.button2}
-                variant="h6"
+                variant="contained"
                 color="inherit"
               >
                 <p className={classes.h3}>Apollo</p>
@@ -372,7 +372,7 @@ export default function Skills() {
               <Button
                 onClick={() => setclick(6)}
                 className={classes.button1}
-                variant="h6"
+                variant="contained"
                 color="inherit"
               >
                 <p className={classes.h3}>SQL</p>
@@ -380,7 +380,7 @@ export default function Skills() {
               <Button
                 onClick={() => setclick(4)}
                 className={classes.button2}
-                variant="h6"
+                variant="contained"
                 color="inherit"
               >
                 <p className={classes.h3}>PHP</p>
@@ -388,7 +388,7 @@ export default function Skills() {
               <Button
                 onClick={() => setclick(7)}
                 className={classes.button1}
-                variant="h6"
+                variant="contained"
                 color="inherit"
               >
                 <p className={classes.h3}>CSS</p>
@@ -396,7 +396,7 @@ export default function Skills() {
               <Button
                 onClick={() => setclick(8)}
                 className={classes.button2}
-                variant="h6"
+                variant="contained"
                 color="inherit"
               >
                 <p className={classes.h3}>AWS</p>

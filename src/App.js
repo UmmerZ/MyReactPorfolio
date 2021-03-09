@@ -1,7 +1,7 @@
 import "./App.css"
-import Navbar from "./components/Navbar"
+
 import HomePage from "./components/HomePage"
-import Skills from "./components/skills/Skills"
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import AboutMe from "./components/AboutMe"
 
