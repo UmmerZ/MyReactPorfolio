@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react"
-import MenuIcon from "@material-ui/core/Menu"
+
 import {
   AppBar,
   Toolbar,
-  IconButton,
   Button,
   makeStyles,
   List,
@@ -14,8 +13,8 @@ export default function Navbar() {
   const useStyle = makeStyles(theme => ({
     buttons: {
       alignItems: "center",
-      margin: '0 10px 0 5px',
-      marginRight: '10px',
+      margin: "0 10px 0 5px",
+      marginRight: "10px",
       "&:hover": {
         backgroundColor: "grey",
       },
@@ -60,17 +59,14 @@ export default function Navbar() {
         className={scrolled ? classes.scrolled : classes.navbar}
       >
         <Toolbar variant="dense">
-          <IconButton edge="start" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
           <List className={classes.list}>
-            <Button className={classes.buttons} variant="h6" color="inherit">
+            <Button className={classes.buttons} color="inherit">
               Gallery
             </Button>
-            <Button className={classes.buttons} variant="h6" color="inherit">
+            <Button className={classes.buttons} color="inherit">
               Contact
             </Button>
-            <Button className={classes.buttons} variant="h6" color="inherit">
+            <Button className={classes.buttons} color="inherit">
               <Link className={classes.link} to="/about-me">
                 About Me
               </Link>
