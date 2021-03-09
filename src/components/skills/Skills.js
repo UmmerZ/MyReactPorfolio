@@ -1,6 +1,17 @@
 import React, { useState } from "react"
-import { makeStyles, AppBar, Toolbar, Button, List } from "@material-ui/core"
+import {
+  makeStyles,
+  AppBar,
+  Toolbar,
+  Button,
+  List,
+  Grid,
+  Typography,
+  Card,
+  Paper,
+} from "@material-ui/core"
 import BuildIcon from "@material-ui/icons/Build"
+import NoteBook from "../images/notebook.jpg"
 
 export default function Skills() {
   const [click, setclick] = useState(0)
@@ -8,7 +19,9 @@ export default function Skills() {
   const useStyles = makeStyles(theme => ({
     diagonalbox: {
       position: "relative",
-      backgroundImage: "linear-gradient(45deg, #171717, #292A29)",
+      backgroundImage: `url(${NoteBook})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
       transform: "skewY(-11deg)",
       height: "20em",
       marginTop: "5em",
@@ -37,6 +50,7 @@ export default function Skills() {
       width: "80%",
       color: "#323336",
       backgroundColor: "#e9ecf2",
+
       height: "100%",
       justifyContent: "center",
       alignItems: "center",
@@ -91,6 +105,18 @@ export default function Skills() {
       justifyContent: "center",
       margin: "0 auto",
       display: "flex",
+    },
+    grid: {
+      width: "100%",
+      height: "10em",
+    },
+    paper: {
+      padding: theme.spacing(1),
+      textAlign: "center",
+      color: theme.palette.text.secondary,
+      background: "grey",
+      border: "solid",
+      borderRadius: "10px",
     },
   }))
   const classes = useStyles()
@@ -321,12 +347,60 @@ export default function Skills() {
     </div>
   )
   return (
-    <div>
+    <div style={{ background: "#444543" }}>
       <h1 className={classes.headNote}>
         Skills <BuildIcon />
       </h1>
-      <div style={{ marginTop: "20px" }}>
-        <AppBar position="static" className={classes.navbar}>
+      <div>
+        <Grid container spacing={4}>
+          <Grid item xs={3} spacing={3}>
+            <Paper onClick={() => setclick(1)} className={classes.paper}>
+              JavaScript
+            </Paper>
+          </Grid>
+          <Grid item xs={3} spacing={3}>
+            <Paper onClick={() => setclick(2)} className={classes.paper}>
+              React JS
+            </Paper>
+          </Grid>
+          <Grid item xs={3} spacing={3}>
+            <Paper onClick={() => setclick(3)} className={classes.paper}>
+              C#
+            </Paper>
+          </Grid>
+          <Grid item xs={3} spacing={3}>
+            <Paper onClick={() => setclick(5)} className={classes.paper}>
+              GraphQl
+            </Paper>
+          </Grid>
+          <Grid item xs={3} spacing={3}>
+            <Paper onClick={() => setclick(9)} className={classes.paper}>
+              Apollo
+            </Paper>
+          </Grid>
+          <Grid item xs={3} spacing={3}>
+            <Paper onClick={() => setclick(6)} className={classes.paper}>
+              SQL
+            </Paper>
+          </Grid>
+          <Grid item xs={3} spacing={3}>
+            <Paper onClick={() => setclick(4)} className={classes.paper}>
+              PHP
+            </Paper>
+          </Grid>
+          <Grid item xs={3} spacing={3}>
+            <Paper onClick={() => setclick(7)} className={classes.paper}>
+              CSS
+            </Paper>
+          </Grid>
+          <Grid item xs={3} spacing={3}>
+            <Paper onClick={() => setclick(8)} className={classes.paper}>
+              AWS
+            </Paper>
+          </Grid>
+        </Grid>
+
+        {/* <AppBar position="static" className={classes.navbar}>
           <Toolbar variant="dense">
             <List className={classes.list}>
               <Button
@@ -403,7 +477,7 @@ export default function Skills() {
               </Button>
             </List>
           </Toolbar>
-        </AppBar>
+        </AppBar> */}
       </div>
       <div className={classes.diagonalbox}>
         <div className={classes.content1}>{renderForm()}</div>
