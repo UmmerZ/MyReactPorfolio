@@ -60,7 +60,7 @@ export default function FrontPage() {
   }))
   const classes = useStyle()
   return (
-    <div>
+    <div style={{ height: "35em", width: "100%" }}>
       <div className={classes.diagonalbox}>
         <div className={classes.content1}>
           <div className={classes.content2}>

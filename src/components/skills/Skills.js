@@ -1,11 +1,9 @@
 import React, { useState } from "react"
-import {
-  makeStyles,
-  Grid,
-  Paper,
-} from "@material-ui/core"
+import { makeStyles, Grid, Paper } from "@material-ui/core"
 import BuildIcon from "@material-ui/icons/Build"
 import NoteBook from "../images/notebook.jpg"
+import JavaScript from "../images/javascript.png"
+import Code from "../images/code.jpg"
 
 export default function Skills() {
   const [click, setclick] = useState(0)
@@ -24,7 +22,7 @@ export default function Skills() {
     },
     content1: {
       maxWidth: "50%",
-      margin: "10px auto",
+      margin: "0 auto",
       paddingTop: "10px",
       color: "#7B7F7C",
       transform: "skewY(11deg)",
@@ -33,8 +31,8 @@ export default function Skills() {
       justifyContent: "center",
       alignItems: "center",
       display: "flex",
-      border: 'solid',
-      borderRadius: '10px'
+      border: "solid",
+      borderRadius: "10px",
 
       // "&:hover": {
       //   transform: " skewY(11deg) rotate(180deg)",
@@ -105,18 +103,31 @@ export default function Skills() {
     grid: {
       width: "100%",
       height: "10em",
-      display: 'flex'
+      display: "flex",
     },
     paper: {
       padding: theme.spacing(4),
       textAlign: "center",
       color: theme.palette.text.secondary,
-      background: "grey",
+      fontSize: "1.2em",
+      fontWeight: "bold",
       border: "solid",
       borderRadius: "10px",
-      fontSize: '',
-      boxShadow: '5px 5px black'
-      
+      fontSize: "",
+      boxShadow: "5px 5px black",
+      "&:hover": {
+        background: "transparent",
+        color: "#ffffff",
+        fontWeight: "normal",
+      },
+    },
+    default: {
+      backgroundImage: `url(${Code})`,
+      backgroundSize: "cover",
+      height: "100%",
+      width: "100%",
+      marginTop: "-10px",
+      color: "#e9ecf2",
     },
   }))
   const classes = useStyles()
@@ -149,7 +160,8 @@ export default function Skills() {
     }
   }
   const defaultForm = (
-    <div className={classes.content2}>
+    <div className={classes.default}>
+      <h1>Click on tabs to read description</h1>
       <h2>
         I am a passionate learner. Every day passes by I learn something new.
       </h2>
@@ -347,53 +359,77 @@ export default function Skills() {
     </div>
   )
   return (
-    <div style={{ background: "#444543" }}>
+    <div
+      style={{
+        background: "#444543",
+
+        height: "60em",
+        marginTop: "10em",
+      }}
+    >
       <h1 className={classes.headNote}>
         Skills <BuildIcon />
       </h1>
       <div>
-        <Grid container spacing={4}>
-          <Grid item xs={3} spacing={3}>
-            <Paper onClick={() => setclick(1)} className={classes.paper}>
+        <Grid
+          container
+          spacing={4}
+          style={{
+            alignItems: "center",
+            alignContent: "center",
+            margin: "0 auto",
+          }}
+        >
+          <Grid item>
+            <Paper
+              style={{
+                hover: {
+                  backgroundImage: `url(${JavaScript})`,
+                  backgroundSize: "center",
+                },
+              }}
+              onClick={() => setclick(1)}
+              className={classes.paper}
+            >
               JavaScript
             </Paper>
           </Grid>
-          <Grid item xs={3} spacing={3}>
+          <Grid item>
             <Paper onClick={() => setclick(2)} className={classes.paper}>
               React JS
             </Paper>
           </Grid>
-          <Grid item xs={3} spacing={3}>
+          <Grid item>
             <Paper onClick={() => setclick(3)} className={classes.paper}>
-              C#
+              CSharp
             </Paper>
           </Grid>
-          <Grid item xs={3} spacing={3}>
+          <Grid item>
             <Paper onClick={() => setclick(5)} className={classes.paper}>
               GraphQl
             </Paper>
           </Grid>
-          <Grid item xs={3} spacing={3}>
+          <Grid item>
             <Paper onClick={() => setclick(9)} className={classes.paper}>
               Apollo
             </Paper>
           </Grid>
-          <Grid item xs={3} spacing={3}>
+          <Grid item>
             <Paper onClick={() => setclick(6)} className={classes.paper}>
               SQL
             </Paper>
           </Grid>
-          <Grid item xs={3} spacing={3}>
+          <Grid item>
             <Paper onClick={() => setclick(4)} className={classes.paper}>
               PHP
             </Paper>
           </Grid>
-          <Grid item xs={3} spacing={3}>
+          <Grid item>
             <Paper onClick={() => setclick(7)} className={classes.paper}>
               CSS
             </Paper>
           </Grid>
-          <Grid item xs={3} spacing={3}>
+          <Grid item>
             <Paper onClick={() => setclick(8)} className={classes.paper}>
               AWS
             </Paper>
