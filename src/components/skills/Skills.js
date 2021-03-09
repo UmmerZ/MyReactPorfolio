@@ -1,13 +1,7 @@
 import React, { useState } from "react"
 import {
   makeStyles,
-  AppBar,
-  Toolbar,
-  Button,
-  List,
   Grid,
-  Typography,
-  Card,
   Paper,
 } from "@material-ui/core"
 import BuildIcon from "@material-ui/icons/Build"
@@ -39,6 +33,8 @@ export default function Skills() {
       justifyContent: "center",
       alignItems: "center",
       display: "flex",
+      border: 'solid',
+      borderRadius: '10px'
 
       // "&:hover": {
       //   transform: " skewY(11deg) rotate(180deg)",
@@ -109,14 +105,18 @@ export default function Skills() {
     grid: {
       width: "100%",
       height: "10em",
+      display: 'flex'
     },
     paper: {
-      padding: theme.spacing(1),
+      padding: theme.spacing(4),
       textAlign: "center",
       color: theme.palette.text.secondary,
       background: "grey",
       border: "solid",
       borderRadius: "10px",
+      fontSize: '',
+      boxShadow: '5px 5px black'
+      
     },
   }))
   const classes = useStyles()
