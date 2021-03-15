@@ -7,7 +7,7 @@ import AboutMe from "./components/AboutMe"
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/about-me" component={AboutMe} />
