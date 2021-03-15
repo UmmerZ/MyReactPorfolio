@@ -113,7 +113,6 @@ export default function Skills() {
       fontWeight: "bold",
       border: "solid",
       borderRadius: "10px",
-      fontSize: "",
       boxShadow: "5px 5px black",
       "&:hover": {
         background: "transparent",
