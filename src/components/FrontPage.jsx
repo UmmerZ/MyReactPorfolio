@@ -5,22 +5,11 @@ import Universe from "./images/universe.jpg"
 
 export default function FrontPage() {
   const useStyle = makeStyles(theme => ({
-    diagonalbox: {
-      position: "relative",
-      backgroundImage: `url(${Universe})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      transform: "skewY(-11deg)",
-      height: "20em",
-      marginTop: "5em",
-      margin: "0",
-      width: "100%",
-    },
     content1: {
       maxWidth: "40em",
       margin: "200px auto",
       color: "#7B7F7C",
-      transform: "skewY(11deg)",
+      borderRadius: "20px",
       position: "relative",
 
       height: "20em",
@@ -60,18 +49,16 @@ export default function FrontPage() {
   }))
   const classes = useStyle()
   return (
-    <div style={{ height: "35em", width: "100%" }}>
-      <div className={classes.diagonalbox}>
-        <div className={classes.content1}>
-          <div className={classes.content2}>
-            {" "}
-            <h1 className={classes.title}>
-              Hello! My Name is Ummer. I am a Web Developer{" "}
-            </h1>
-          </div>
-          <div className={classes.content3}>
-            <img className={classes.image} src={Lion} alt="lion" />
-          </div>
+    <div style={{ height: "20em", width: "100%", back: "#444543" }}>
+      <div className={classes.content1}>
+        <div className={classes.content2}>
+          {" "}
+          <h1 className={classes.title}>
+            Hello! My Name is Ummer. I am a Web Developer{" "}
+          </h1>
+        </div>
+        <div className={classes.content3}>
+          <img className={classes.image} src={Lion} alt="lion" />
         </div>
       </div>
     </div>
