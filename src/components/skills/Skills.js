@@ -21,23 +21,12 @@ export default function Skills() {
   const [click, setclick] = useState(0)
 
   const useStyles = makeStyles(theme => ({
-    diagonalbox: {
-      position: "relative",
-      backgroundImage: `url(${NoteBook})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      transform: "skewY(-11deg)",
-      height: "20em",
-      marginTop: "5em",
-      margin: "0",
-      width: "100%",
-    },
     content1: {
       maxWidth: "50%",
       margin: "0 auto",
       paddingTop: "10px",
       color: "#7B7F7C",
-      transform: "skewY(11deg)",
+
       backgroundColor: "#e9ecf2",
       height: "25em",
       justifyContent: "center",

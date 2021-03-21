@@ -39,8 +39,8 @@ export default function Projects() {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      border: "1px solid #BFBFBF",
-      boxShadow: "5px 5px 3px #9d9594",
+      border: "1px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
       "&:hover": {
         backgroundImage: `url(${Bid})`,
         backgroundSize: "cover",
@@ -58,8 +58,8 @@ export default function Projects() {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      border: "1px solid #BFBFBF",
-      boxShadow: "5px 5px 3px #9d9594",
+      border: "1px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
       "&:hover": {
         backgroundImage: `url(${goodReels})`,
         backgroundSize: "cover",
@@ -77,8 +77,8 @@ export default function Projects() {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      border: "1px solid #BFBFBF",
-      boxShadow: "5px 5px 3px #9d9594",
+      border: "1px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
     },
     containter4: {
       background: "grey",
@@ -90,8 +90,8 @@ export default function Projects() {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      border: "1px solid #BFBFBF",
-      boxShadow: "5px 5px 3px #9d9594",
+      border: "1px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
     },
   }))
   const classes = useStyles()

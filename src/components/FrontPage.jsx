@@ -6,31 +6,18 @@ import Universe from "./images/universe.jpg"
 export default function FrontPage() {
   const useStyle = makeStyles(theme => ({
     content1: {
-      maxWidth: "40em",
+      maxWidth: "80%",
       margin: "200px auto",
       color: "#7B7F7C",
       borderRadius: "20px",
       position: "relative",
-
-      height: "20em",
-    },
-    content2: {
-      width: "50%",
-      color: "#ffffff",
-      background: "MediumSeaGreen",
+      backgroundImage: `url(${Lion})`,
+      backgroundSize: "cover",
       height: "100%",
-      float: "left",
-    },
-    content3: {
-      width: "50%",
-      color: "#7B7F7C",
-      background: "black",
-      height: "100%",
-      float: "right",
     },
 
     title: {
-      maxWidth: "80%",
+      maxWidth: "20%",
       margin: "20px 20px 20px 20px",
       overflow: "hidden",
       padding: "10px",
@@ -51,15 +38,9 @@ export default function FrontPage() {
   return (
     <div style={{ height: "20em", width: "100%", back: "#444543" }}>
       <div className={classes.content1}>
-        <div className={classes.content2}>
-          {" "}
-          <h1 className={classes.title}>
-            Hello! My Name is Ummer. I am a Web Developer{" "}
-          </h1>
-        </div>
-        <div className={classes.content3}>
-          <img className={classes.image} src={Lion} alt="lion" />
-        </div>
+        <h1 className={classes.title}>
+          Hello! My Name is Ummer. I am a Web Developer{" "}
+        </h1>
       </div>
     </div>
   )
