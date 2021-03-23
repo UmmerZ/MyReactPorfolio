@@ -20,12 +20,12 @@ export default function Navbar() {
       },
     },
     navbar: {
-      backgroundColor: "MediumSeaGreen",
+      backgroundColor: "#6E6E6E",
     },
     scrolled: {
       position: "fixed",
       top: "10px",
-      backgroundColor: "#A006F2",
+      backgroundColor: "#1C1C1C",
       transition: "all .7s ease-in",
     },
     list: {

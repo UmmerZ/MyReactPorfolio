@@ -56,6 +56,7 @@ export default function Projects() {
       margin: "0 auto",
       justifyContent: "center",
       background: "#444543",
+      flexWrap: "wrap",
     },
     containerMain2: {
       width: "90%",
@@ -76,7 +77,7 @@ export default function Projects() {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      border: "1px solid #201c1c",
+      border: "5px solid #201c1c",
       boxShadow: "5px 5px 3px  #201c1c",
       backgroundImage: `url(${cSharp})`,
       backgroundSize: "cover",
@@ -97,7 +98,7 @@ export default function Projects() {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      border: "1px solid #201c1c",
+      border: "5px solid #201c1c",
       boxShadow: "5px 5px 3px  #201c1c",
       backgroundImage: `url(${reactImage})`,
       backgroundSize: "cover",
@@ -118,7 +119,7 @@ export default function Projects() {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      border: "1px solid #201c1c",
+      border: "5px solid #201c1c",
       boxShadow: "5px 5px 3px  #201c1c",
       backgroundImage: `url(${aspDotNetImage})`,
       backgroundSize: "cover",
@@ -133,7 +134,7 @@ export default function Projects() {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      border: "1px solid #201c1c",
+      border: "5px solid #201c1c",
       boxShadow: "5px 5px 3px  #201c1c",
       backgroundImage: `url(${phpImage})`,
       backgroundSize: "cover",
@@ -303,7 +304,7 @@ export default function Projects() {
       style={{
         height: "100%",
         width: "100%",
-        margin: "-15em auto",
+
         alignContent: "center",
         alignItems: "center",
       }}

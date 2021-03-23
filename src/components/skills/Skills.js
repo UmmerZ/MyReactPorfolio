@@ -1,9 +1,16 @@
 import React, { useState } from "react"
 import { makeStyles, Grid, Paper } from "@material-ui/core"
 import BuildIcon from "@material-ui/icons/Build"
-import NoteBook from "../images/notebook.jpg"
+import ReactJsImage from "../images/Reactjs.png"
 import JavaScript from "../images/javascript.png"
-import Code from "../images/code.jpg"
+import sqlImage from "../images/sql.png"
+import JsImage from "../images/js.jpg"
+import CsharpImage from "../images/cSharp.jpg"
+import GraphQLImage from "../images/graphql.png"
+import ApolloImage from "../images/apollo.png"
+import PHPImage from "../images/php.png"
+import CSSImagae from "../images/css.png"
+import AWSImage from "../images/aws.jpg"
 import {
   defaultForm,
   JavaScriptForm,
@@ -34,11 +41,6 @@ export default function Skills() {
       display: "flex",
       border: "solid",
       borderRadius: "10px",
-
-      // "&:hover": {
-      //   transform: " skewY(11deg) rotate(180deg)",
-      //   tranistion: "visibility 1s linear",
-      // },
     },
     content2: {
       display: "block",
@@ -63,78 +65,183 @@ export default function Skills() {
       paddingBottom: "0",
     },
 
-    navbar: {
-      background: "#A006F2",
-    },
-    list: {
-      width: "100%",
-      justifyContent: "center",
-      margin: "0 auto",
-      alignItems: "center",
-    },
-    button1: {
-      width: "8%",
-      margin: "10px auto",
-      transition: "background .2s ease, color .2s ease",
-      background: "#161716",
-
-      "&:hover": {
-        height: "20%",
-        background: "#A006F2",
-      },
-    },
-    button2: {
-      width: "10%",
-      transition: "background .2s ease, color .2s ease",
-      background: "#161716",
-
-      "&:hover": {
-        background: "#A006F2",
-        height: "20%",
-      },
-    },
-    drawer: {
-      background: "#161716",
-      alignItems: "center",
-      justifyContent: "center",
-      margin: "0 auto",
+    containerMain1: {
+      width: "90%",
+      height: "30%",
+      background: "salmon",
       display: "flex",
+      margin: "0 auto",
+      justifyContent: "center",
+      background: "#444543",
+      flexWrap: "wrap",
     },
-    grid: {
-      width: "100%",
-      height: "10em",
-      display: "flex",
-    },
-    paper: {
-      padding: theme.spacing(4),
-      textAlign: "center",
-      color: theme.palette.text.secondary,
-      fontSize: "1.2em",
-      fontWeight: "bold",
-      border: "solid",
+    containter1: {
+      background: "grey",
+      width: "200px",
       borderRadius: "10px",
-      boxShadow: "5px 5px black",
+      height: "200px",
+      borderRadius: "10px",
+      margin: "40px auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "5px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
+      backgroundImage: `url(${JsImage})`,
+      backgroundSize: "cover",
       "&:hover": {
-        background: "transparent",
-        color: "#ffffff",
-        fontWeight: "normal",
+        backgroundBlendMode: "multiply",
       },
     },
-    default: {
-      backgroundImage: `url(${Code})`,
+    containterReact: {
+      background: "grey",
+      width: "200px",
+      borderRadius: "10px",
+      height: "200px",
+      borderRadius: "10px",
+      margin: "40px auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "5px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
+      backgroundImage: `url(${ReactJsImage})`,
       backgroundSize: "cover",
-      height: "100%",
-      width: "100%",
-      marginTop: "-10px",
-      color: "#e9ecf2",
+      "&:hover": {
+        backgroundBlendMode: "multiply",
+      },
+    },
+    containterCsharp: {
+      background: "grey",
+      width: "200px",
+      borderRadius: "10px",
+      height: "200px",
+      borderRadius: "10px",
+      margin: "40px auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "5px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
+      backgroundImage: `url(${CsharpImage})`,
+      backgroundSize: "cover",
+      "&:hover": {
+        backgroundBlendMode: "multiply",
+      },
+    },
+    containterGraphQl: {
+      background: "grey",
+      width: "200px",
+      borderRadius: "10px",
+      height: "200px",
+      borderRadius: "10px",
+      margin: "40px auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "5px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
+      backgroundImage: `url(${GraphQLImage})`,
+      backgroundSize: "cover",
+      "&:hover": {
+        backgroundBlendMode: "multiply",
+      },
+    },
+    containterApollo: {
+      background: "grey",
+      width: "200px",
+      borderRadius: "10px",
+      height: "200px",
+      borderRadius: "10px",
+      margin: "40px auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "5px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
+      backgroundImage: `url(${ApolloImage})`,
+      backgroundSize: "cover",
+      "&:hover": {
+        backgroundBlendMode: "multiply",
+      },
+    },
+    containterSQL: {
+      background: "grey",
+      width: "200px",
+      borderRadius: "10px",
+      height: "200px",
+      borderRadius: "10px",
+      margin: "40px auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "5px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
+      backgroundImage: `url(${sqlImage})`,
+      backgroundSize: "cover",
+      "&:hover": {
+        backgroundBlendMode: "multiply",
+      },
+    },
+    containterPHP: {
+      background: "grey",
+      width: "200px",
+      borderRadius: "10px",
+      height: "200px",
+      borderRadius: "10px",
+      margin: "40px auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "5px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
+      backgroundImage: `url(${PHPImage})`,
+      backgroundSize: "cover",
+      "&:hover": {
+        backgroundBlendMode: "multiply",
+      },
+    },
+    containterCSS: {
+      background: "grey",
+      width: "200px",
+      borderRadius: "10px",
+      height: "200px",
+      borderRadius: "10px",
+      margin: "40px auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "5px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
+      backgroundImage: `url(${CSSImagae})`,
+      backgroundSize: "cover",
+      "&:hover": {
+        backgroundBlendMode: "multiply",
+      },
+    },
+    containterAWS: {
+      background: "grey",
+      width: "200px",
+      borderRadius: "10px",
+      height: "200px",
+      borderRadius: "10px",
+      margin: "40px auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "5px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
+      backgroundImage: `url(${AWSImage})`,
+      backgroundSize: "cover",
+      "&:hover": {
+        backgroundBlendMode: "multiply",
+      },
     },
   }))
   const classes = useStyles()
 
   function renderForm() {
     switch (click) {
-      case 0:
-        return defaultForm
       case 1:
         return JavaScriptForm
       case 2:
@@ -163,82 +270,47 @@ export default function Skills() {
     <div
       style={{
         background: "#444543",
-
-        height: "60em",
-        marginTop: "10em",
       }}
     >
       <h1 className={classes.headNote}>
         Skills <BuildIcon />
       </h1>
-      <div>
-        <Grid
-          container
-          spacing={4}
-          style={{
-            alignItems: "center",
-            alignContent: "center",
-            margin: "0 auto",
-          }}
-        >
-          <Grid item>
-            <Paper
-              style={{
-                hover: {
-                  backgroundImage: `url(${JavaScript})`,
-                  backgroundSize: "center",
-                },
-              }}
-              onClick={() => setclick(1)}
-              className={classes.paper}
-            >
-              JavaScript
-            </Paper>
-          </Grid>
-          <Grid item>
-            <Paper onClick={() => setclick(2)} className={classes.paper}>
-              React JS
-            </Paper>
-          </Grid>
-          <Grid item>
-            <Paper onClick={() => setclick(3)} className={classes.paper}>
-              CSharp
-            </Paper>
-          </Grid>
-          <Grid item>
-            <Paper onClick={() => setclick(5)} className={classes.paper}>
-              GraphQl
-            </Paper>
-          </Grid>
-          <Grid item>
-            <Paper onClick={() => setclick(9)} className={classes.paper}>
-              Apollo
-            </Paper>
-          </Grid>
-          <Grid item>
-            <Paper onClick={() => setclick(6)} className={classes.paper}>
-              SQL
-            </Paper>
-          </Grid>
-          <Grid item>
-            <Paper onClick={() => setclick(4)} className={classes.paper}>
-              PHP
-            </Paper>
-          </Grid>
-          <Grid item>
-            <Paper onClick={() => setclick(7)} className={classes.paper}>
-              CSS
-            </Paper>
-          </Grid>
-          <Grid item>
-            <Paper onClick={() => setclick(8)} className={classes.paper}>
-              AWS
-            </Paper>
-          </Grid>
-        </Grid>
-      </div>
-      <div className={classes.diagonalbox}>
-        <div className={classes.content1}>{renderForm()}</div>
+      <div className={classes.containerMain1}>
+        <div onClick={() => setclick(1)} className={classes.containter1}>
+          {renderForm()}
+        </div>
+        <div
+          onClick={() => setclick(2)}
+          className={classes.containterReact}
+        ></div>
+        <div
+          onClick={() => setclick(3)}
+          className={classes.containterCsharp}
+        ></div>
+        <div
+          onClick={() => setclick(5)}
+          className={classes.containterGraphQl}
+        ></div>
+        <div
+          onClick={() => setclick(9)}
+          className={classes.containterApollo}
+        ></div>
+        <div
+          onClick={() => setclick(6)}
+          className={classes.containterSQL}
+        ></div>
+        <div
+          onClick={() => setclick(4)}
+          className={classes.containterPHP}
+        ></div>
+        <div
+          onClick={() => setclick(7)}
+          className={classes.containterCSS}
+        ></div>
+        <div
+          onClick={() => setclick(8)}
+          className={classes.containterAWS}
+        ></div>
       </div>
     </div>
   )
