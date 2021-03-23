@@ -1,7 +1,7 @@
 import React from "react"
 import FrontPage from "./FrontPage"
 import Navbar from "./Navbar"
-import Projects from "./Projects"
+import Projects from "./projects/Projects"
 import Skills from "./skills/Skills"
 
 export default function HomePage() {
