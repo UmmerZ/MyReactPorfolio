@@ -1,31 +1,37 @@
 {
   "files": {
     "main.css": "/MyReactPortfolio/static/css/main.3486fe2b.chunk.css",
-    "main.js": "/MyReactPortfolio/static/js/main.57fd38b1.chunk.js",
-    "main.js.map": "/MyReactPortfolio/static/js/main.57fd38b1.chunk.js.map",
+    "main.js": "/MyReactPortfolio/static/js/main.7398f2b4.chunk.js",
+    "main.js.map": "/MyReactPortfolio/static/js/main.7398f2b4.chunk.js.map",
     "runtime-main.js": "/MyReactPortfolio/static/js/runtime-main.f8bcdb04.js",
     "runtime-main.js.map": "/MyReactPortfolio/static/js/runtime-main.f8bcdb04.js.map",
-    "static/js/2.678425aa.chunk.js": "/MyReactPortfolio/static/js/2.678425aa.chunk.js",
-    "static/js/2.678425aa.chunk.js.map": "/MyReactPortfolio/static/js/2.678425aa.chunk.js.map",
+    "static/js/2.a3989389.chunk.js": "/MyReactPortfolio/static/js/2.a3989389.chunk.js",
+    "static/js/2.a3989389.chunk.js.map": "/MyReactPortfolio/static/js/2.a3989389.chunk.js.map",
     "index.html": "/MyReactPortfolio/index.html",
     "static/css/main.3486fe2b.chunk.css.map": "/MyReactPortfolio/static/css/main.3486fe2b.chunk.css.map",
-    "static/js/2.678425aa.chunk.js.LICENSE.txt": "/MyReactPortfolio/static/js/2.678425aa.chunk.js.LICENSE.txt",
+    "static/js/2.a3989389.chunk.js.LICENSE.txt": "/MyReactPortfolio/static/js/2.a3989389.chunk.js.LICENSE.txt",
+    "static/media/Reactjs.d1d00361.png": "/MyReactPortfolio/static/media/Reactjs.d1d00361.png",
+    "static/media/apollo.bcf073ae.png": "/MyReactPortfolio/static/media/apollo.bcf073ae.png",
     "static/media/asp.50995cc3.jpg": "/MyReactPortfolio/static/media/asp.50995cc3.jpg",
+    "static/media/aws.993b4b8c.jpg": "/MyReactPortfolio/static/media/aws.993b4b8c.jpg",
     "static/media/bidacar.256f2eca.jpg": "/MyReactPortfolio/static/media/bidacar.256f2eca.jpg",
     "static/media/cSharp.7653eb51.jpg": "/MyReactPortfolio/static/media/cSharp.7653eb51.jpg",
     "static/media/code.948b85dc.jpg": "/MyReactPortfolio/static/media/code.948b85dc.jpg",
+    "static/media/css.023035db.png": "/MyReactPortfolio/static/media/css.023035db.png",
     "static/media/goodreels.3488e76b.jpg": "/MyReactPortfolio/static/media/goodreels.3488e76b.jpg",
-    "static/media/javascript.6c1e8db3.png": "/MyReactPortfolio/static/media/javascript.6c1e8db3.png",
+    "static/media/grandcanyon.d3d4ce81.jpg": "/MyReactPortfolio/static/media/grandcanyon.d3d4ce81.jpg",
+    "static/media/graphql.e3a02a8f.png": "/MyReactPortfolio/static/media/graphql.e3a02a8f.png",
+    "static/media/highway15.5182f474.jpg": "/MyReactPortfolio/static/media/highway15.5182f474.jpg",
+    "static/media/js.4d11b7ee.jpg": "/MyReactPortfolio/static/media/js.4d11b7ee.jpg",
     "static/media/lion.f17c6698.jpg": "/MyReactPortfolio/static/media/lion.f17c6698.jpg",
-    "static/media/notebook.6a13d347.jpg": "/MyReactPortfolio/static/media/notebook.6a13d347.jpg",
     "static/media/php.60008588.png": "/MyReactPortfolio/static/media/php.60008588.png",
     "static/media/reactrs.ec15503f.jpg": "/MyReactPortfolio/static/media/reactrs.ec15503f.jpg",
-    "static/media/universe.283e26eb.jpg": "/MyReactPortfolio/static/media/universe.283e26eb.jpg"
+    "static/media/sql.ad9eb45d.png": "/MyReactPortfolio/static/media/sql.ad9eb45d.png"
   },
   "entrypoints": [
     "static/js/runtime-main.f8bcdb04.js",
-    "static/js/2.678425aa.chunk.js",
+    "static/js/2.a3989389.chunk.js",
     "static/css/main.3486fe2b.chunk.css",
-    "static/js/main.57fd38b1.chunk.js"
+    "static/js/main.7398f2b4.chunk.js"
   ]
 }
