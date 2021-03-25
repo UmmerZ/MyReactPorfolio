@@ -8,6 +8,7 @@ import {
   List,
   Link,
 } from "@material-ui/core"
+import HomeIcon from "@material-ui/icons/Home"
 
 export default function Navbar() {
   const useStyle = makeStyles(theme => ({
@@ -15,12 +16,14 @@ export default function Navbar() {
       alignItems: "center",
       margin: "0 10px 0 5px",
       marginRight: "10px",
+      textDecoration: "none",
       "&:hover": {
         backgroundColor: "grey",
       },
     },
     navbar: {
-      backgroundColor: "#6E6E6E",
+      backgroundColor: "transparent",
+      boxShadow: "none",
     },
     scrolled: {
       position: "fixed",
@@ -35,6 +38,9 @@ export default function Navbar() {
     link: {
       textDecoration: "none",
       color: "#ffffff",
+      "&:hover": {
+        textDecoration: "none",
+      },
     },
   }))
   const classes = useStyle()
@@ -61,10 +67,18 @@ export default function Navbar() {
         <Toolbar variant="dense">
           <List className={classes.list}>
             <Button className={classes.buttons} color="inherit">
+              <Link className={classes.link} href="/MyReactPortfolio">
+                <HomeIcon />
+              </Link>
+            </Button>
+
+            <Button className={classes.buttons} color="inherit">
               Gallery
             </Button>
             <Button className={classes.buttons} color="inherit">
-              Contact
+              <Link className={classes.link} href="/contact">
+                Contact
+              </Link>
             </Button>
             <Button className={classes.buttons} color="inherit">
               <Link className={classes.link} to="/about-me">

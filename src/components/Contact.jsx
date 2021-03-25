@@ -1,11 +1,4 @@
-import {
-  Button,
-  FormControl,
-  makeStyles,
-  Paper,
-  TextField,
-} from "@material-ui/core"
-
+import { Button, makeStyles, Paper, TextField } from "@material-ui/core"
 import React, { useState } from "react"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
@@ -22,10 +15,6 @@ export default function Contact() {
       margin: "100px auto",
       borderRadius: "10px",
       boxShadow: "5px 5px 3px  #201c1c",
-      //   "& .MuiTextField-root": {
-      //     margin: theme.spacing(2),
-      //     width: "25ch",
-      //   },
     },
     root: {
       display: "flex",
@@ -68,7 +57,7 @@ export default function Contact() {
       emailMessage,
     }
     console.log(details)
-    let response = await fetch("http://localhost:5000/contact", {
+    let response = await fetch("http://localhost:3000/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

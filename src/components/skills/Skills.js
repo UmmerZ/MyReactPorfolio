@@ -1,8 +1,8 @@
 import React, { useState } from "react"
-import { makeStyles, Grid, Paper } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core"
 import BuildIcon from "@material-ui/icons/Build"
 import ReactJsImage from "../images/Reactjs.png"
-import JavaScript from "../images/javascript.png"
+
 import sqlImage from "../images/sql.png"
 import JsImage from "../images/js.jpg"
 import CsharpImage from "../images/cSharp.jpg"
@@ -12,7 +12,6 @@ import PHPImage from "../images/php.png"
 import CSSImagae from "../images/css.png"
 import AWSImage from "../images/aws.jpg"
 import {
-  defaultForm,
   JavaScriptForm,
   ReactForm,
   CSharpForm,
@@ -68,17 +67,16 @@ export default function Skills() {
     containerMain1: {
       width: "90%",
       height: "30%",
-      background: "salmon",
+
       display: "flex",
       margin: "0 auto",
       justifyContent: "center",
-      background: "#444543",
+      background: "#3C4049",
       flexWrap: "wrap",
     },
     containter1: {
       background: "grey",
       width: "200px",
-      borderRadius: "10px",
       height: "200px",
       borderRadius: "10px",
       margin: "40px auto",
@@ -96,7 +94,7 @@ export default function Skills() {
     containterReact: {
       background: "grey",
       width: "200px",
-      borderRadius: "10px",
+
       height: "200px",
       borderRadius: "10px",
       margin: "40px auto",
@@ -114,7 +112,7 @@ export default function Skills() {
     containterCsharp: {
       background: "grey",
       width: "200px",
-      borderRadius: "10px",
+
       height: "200px",
       borderRadius: "10px",
       margin: "40px auto",
@@ -132,7 +130,6 @@ export default function Skills() {
     containterGraphQl: {
       background: "grey",
       width: "200px",
-      borderRadius: "10px",
       height: "200px",
       borderRadius: "10px",
       margin: "40px auto",
@@ -143,6 +140,7 @@ export default function Skills() {
       boxShadow: "5px 5px 3px  #201c1c",
       backgroundImage: `url(${GraphQLImage})`,
       backgroundSize: "cover",
+
       "&:hover": {
         backgroundBlendMode: "multiply",
       },
@@ -150,7 +148,7 @@ export default function Skills() {
     containterApollo: {
       background: "grey",
       width: "200px",
-      borderRadius: "10px",
+
       height: "200px",
       borderRadius: "10px",
       margin: "40px auto",
@@ -168,7 +166,7 @@ export default function Skills() {
     containterSQL: {
       background: "grey",
       width: "200px",
-      borderRadius: "10px",
+
       height: "200px",
       borderRadius: "10px",
       margin: "40px auto",
@@ -183,10 +181,9 @@ export default function Skills() {
         backgroundBlendMode: "multiply",
       },
     },
-    containterPHP: {
+    containerPHP: {
       background: "grey",
       width: "200px",
-      borderRadius: "10px",
       height: "200px",
       borderRadius: "10px",
       margin: "40px auto",
@@ -204,7 +201,6 @@ export default function Skills() {
     containterCSS: {
       background: "grey",
       width: "200px",
-      borderRadius: "10px",
       height: "200px",
       borderRadius: "10px",
       margin: "40px auto",
@@ -222,7 +218,6 @@ export default function Skills() {
     containterAWS: {
       background: "grey",
       width: "200px",
-      borderRadius: "10px",
       height: "200px",
       borderRadius: "10px",
       margin: "40px auto",
@@ -237,80 +232,86 @@ export default function Skills() {
         backgroundBlendMode: "multiply",
       },
     },
+    clickView: {
+      width: "400px",
+      height: "400px",
+      borderRadius: "10px",
+      margin: "0 auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "5px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
+    },
   }))
   const classes = useStyles()
-
-  function renderForm() {
-    switch (click) {
-      case 1:
-        return JavaScriptForm
-      case 2:
-        return ReactForm
-      case 3:
-        return CSharpForm
-      case 4:
-        return PHPForm
-      case 5:
-        return GraphQLForm
-      case 6:
-        return SQLForm
-      case 7:
-        return CSSForm
-      case 8:
-        return AWSForm
-      case 9:
-        return ApolloForm
-
-      default:
-        break
-    }
-  }
 
   return (
     <div
       style={{
-        background: "#444543",
+        background: "#3C4049",
       }}
     >
       <h1 className={classes.headNote}>
         Skills <BuildIcon />
       </h1>
       <div className={classes.containerMain1}>
-        <div onClick={() => setclick(1)} className={classes.containter1}>
-          {renderForm()}
+        <div
+          onClick={() => setclick(1)}
+          className={click === 1 ? classes.clickView : classes.containter1}
+        >
+          {click === 1 ? JavaScriptForm : ""}
         </div>
         <div
           onClick={() => setclick(2)}
-          className={classes.containterReact}
-        ></div>
+          className={click === 2 ? classes.clickView : classes.containterReact}
+        >
+          {click === 2 ? ReactForm : ""}
+        </div>
         <div
           onClick={() => setclick(3)}
-          className={classes.containterCsharp}
-        ></div>
+          className={click === 3 ? classes.clickView : classes.containterCsharp}
+        >
+          {click === 3 ? CSharpForm : ""}
+        </div>
         <div
           onClick={() => setclick(5)}
-          className={classes.containterGraphQl}
-        ></div>
+          className={
+            click === 5 ? classes.clickView : classes.containterGraphQl
+          }
+        >
+          {click === 5 ? GraphQLForm : ""}
+        </div>
         <div
           onClick={() => setclick(9)}
-          className={classes.containterApollo}
-        ></div>
+          className={click === 9 ? classes.clickView : classes.containterApollo}
+        >
+          {click === 9 ? ApolloForm : ""}
+        </div>
         <div
           onClick={() => setclick(6)}
-          className={classes.containterSQL}
-        ></div>
+          className={click === 6 ? classes.clickView : classes.containterSQL}
+        >
+          {click === 6 ? SQLForm : ""}
+        </div>
         <div
           onClick={() => setclick(4)}
-          className={classes.containterPHP}
-        ></div>
+          className={click === 4 ? classes.clickView : classes.containerPHP}
+        >
+          {click === 4 ? PHPForm : ""}
+        </div>
         <div
           onClick={() => setclick(7)}
-          className={classes.containterCSS}
-        ></div>
+          className={click === 7 ? classes.clickView : classes.containterCSS}
+        >
+          {click === 7 ? CSSForm : ""}
+        </div>
         <div
           onClick={() => setclick(8)}
-          className={classes.containterAWS}
-        ></div>
+          className={click === 8 ? classes.clickView : classes.containterAWS}
+        >
+          {click === 8 ? AWSForm : ""}
+        </div>
       </div>
     </div>
   )
