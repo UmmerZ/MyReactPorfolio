@@ -81,6 +81,11 @@ export default function Navbar() {
               </Link>
             </Button>
             <Button className={classes.buttons} color="inherit">
+              <Link className={classes.link} href="/resume">
+                Resume
+              </Link>
+            </Button>
+            <Button className={classes.buttons} color="inherit">
               <Link className={classes.link} to="/about-me">
                 About Me
               </Link>
