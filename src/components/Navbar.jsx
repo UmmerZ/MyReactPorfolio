@@ -81,7 +81,7 @@ export default function Navbar() {
               </Link>
             </Button>
             <Button className={classes.buttons} color="inherit">
-              <Link className={classes.link} href="/resume">
+              <Link className={classes.link} href="/MyReactPortfolio/resume">
                 Resume
               </Link>
             </Button>
