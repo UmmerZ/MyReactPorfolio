@@ -238,7 +238,7 @@ export default function Resume() {
       </div>
       <DownloadLink
         label="Download "
-        filename="resume.pdf"
+        filename="resume.txt"
         exportFile={() =>
           Promise.resolve(getDataFromURL("./images/resume.pdf"))
         }
