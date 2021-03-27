@@ -7,8 +7,10 @@ import {
   makeStyles,
   List,
   Link,
+  useMediaQuery,
 } from "@material-ui/core"
 import HomeIcon from "@material-ui/icons/Home"
+import MenuIcon from "@material-ui/icons/Menu"
 
 export default function Navbar() {
   const useStyle = makeStyles(theme => ({
@@ -45,6 +47,7 @@ export default function Navbar() {
   }))
   const classes = useStyle()
   const [scrolled, setScrolled] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
   const handleScroll = () => {
     const offset = window.scrollY
     if (offset > 10) {
@@ -53,11 +56,52 @@ export default function Navbar() {
       setScrolled(false)
     }
   }
-
+  const handleResize = () => {
+    if (window.innerWidth < 720) {
+      setIsMobile(true)
+    } else {
+      setIsMobile(false)
+    }
+  }
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
+    window.addEventListener("resize", handleResize)
   })
+  const fullWidthMenu = (
+    <List>
+      <Button className={classes.buttons} color="inherit">
+        <Link className={classes.link} href="/MyReactPortfolio">
+          <HomeIcon />
+        </Link>
+      </Button>
 
+      <Button className={classes.buttons} color="inherit">
+        Gallery
+      </Button>
+      <Button className={classes.buttons} color="inherit">
+        <Link className={classes.link} href="/contact">
+          Contact
+        </Link>
+      </Button>
+      <Button className={classes.buttons} color="inherit">
+        <Link className={classes.link} href="/MyReactPortfolio/resume">
+          Resume
+        </Link>
+      </Button>
+      <Button className={classes.buttons} color="inherit">
+        <Link className={classes.link} to="/about-me">
+          About Me
+        </Link>
+      </Button>
+    </List>
+  )
+  const mobileMenu = (
+    <List className={classes.list}>
+      <Button className={classes.buttons} color="inherit">
+        <MenuIcon />
+      </Button>
+    </List>
+  )
   return (
     <div style={{ marginTop: "20px" }}>
       <AppBar
@@ -65,32 +109,7 @@ export default function Navbar() {
         className={scrolled ? classes.scrolled : classes.navbar}
       >
         <Toolbar variant="dense">
-          <List className={classes.list}>
-            <Button className={classes.buttons} color="inherit">
-              <Link className={classes.link} href="/MyReactPortfolio">
-                <HomeIcon />
-              </Link>
-            </Button>
-
-            <Button className={classes.buttons} color="inherit">
-              Gallery
-            </Button>
-            <Button className={classes.buttons} color="inherit">
-              <Link className={classes.link} href="/contact">
-                Contact
-              </Link>
-            </Button>
-            <Button className={classes.buttons} color="inherit">
-              <Link className={classes.link} href="/MyReactPortfolio/resume">
-                Resume
-              </Link>
-            </Button>
-            <Button className={classes.buttons} color="inherit">
-              <Link className={classes.link} to="/about-me">
-                About Me
-              </Link>
-            </Button>
-          </List>
+          {isMobile ? mobileMenu : fullWidthMenu}
         </Toolbar>
       </AppBar>
     </div>
