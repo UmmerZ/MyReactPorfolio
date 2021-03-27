@@ -1,4 +1,4 @@
-import { makeStyles, Paper, Typography } from "@material-ui/core"
+import { makeStyles, Paper } from "@material-ui/core"
 import React, { useState } from "react"
 import Bid from "../images/bidacar.jpg"
 import goodReels from "../images/goodreels.jpg"

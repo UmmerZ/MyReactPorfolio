@@ -1,4 +1,4 @@
-import Bid from "../images/bidacar.jpg"
+
 const content2 = {
   display: "block",
   width: "100%",
