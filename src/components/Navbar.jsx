@@ -80,7 +80,7 @@ export default function Navbar() {
     <div style={{ margin:"0", padding:"0", }}>
     <List>
     <Button className={classes.mobilebutton} color="inherit">
-        <Link className={classes.link} href="/">
+        <Link className={classes.link} href="/MyReactPortfolio">
           Home
         </Link>
       </Button>
@@ -114,7 +114,7 @@ export default function Navbar() {
   const fullWidthMenu = (
     <List>
       <Button className={classes.buttons} color="inherit">
-        <Link className={classes.link} href="/">
+        <Link className={classes.link} href="/MyReactPortfolio">
           <HomeIcon />
         </Link>
       </Button>
