@@ -114,7 +114,7 @@ export default function Navbar() {
   const fullWidthMenu = (
     <List>
       <Button className={classes.buttons} color="inherit">
-        <Link className={classes.link} to="/MyPortfolio">
+        <Link className={classes.link} to="/MyReactPortfolio">
           <HomeIcon />
         </Link>
       </Button>
