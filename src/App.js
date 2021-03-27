@@ -12,11 +12,11 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/MyReactPortfolio" component={HomePage} />
-        <Route exact path="/about-me" component={AboutMe} />
-        <Route exact path="/MyReactPortfolio/resume" component={Resume} />
+        <Route exact path="/" component={HomePage} />
+        <Route path="/about-me" component={AboutMe} />
+        <Route path="/resume" component={Resume} />
         <Route path="/resume-download" component={PDF} />
-        <Route exact path="/contact">
+        <Route  path="/contact">
           <Contact />
         </Route>
       </Switch>
