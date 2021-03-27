@@ -1,5 +1,6 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core"
+import Navbar from "./Navbar"
 
 export default function AboutMe() {
   const useStyles = makeStyles(theme => ({
@@ -44,7 +45,7 @@ export default function AboutMe() {
   }))
   const classes = useStyles()
   return (
-    <div>
+    <div><Navbar />
       <h1 style={{ color: "#ffffff" }}>About me</h1>
       <div className={classes.diagonalbox}>
         <div className={classes.content1}>
