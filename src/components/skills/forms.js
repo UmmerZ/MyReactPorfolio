@@ -1,4 +1,3 @@
-import { makeStyles } from "@material-ui/core"
 import Code from "../images/code.jpg"
 
 const defaultF = {
@@ -11,7 +10,6 @@ const defaultF = {
 }
 const content2 = {
   display: "block",
-  width: "80%",
   color: "#323336",
   backgroundColor: "#e9ecf2",
   height: "100%",

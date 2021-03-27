@@ -1,11 +1,17 @@
 import React, { useState } from "react"
-import { makeStyles, Grid, Paper } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core"
 import BuildIcon from "@material-ui/icons/Build"
-import NoteBook from "../images/notebook.jpg"
-import JavaScript from "../images/javascript.png"
-import Code from "../images/code.jpg"
+import ReactJsImage from "../images/Reactjs.png"
+
+import sqlImage from "../images/sql.png"
+import JsImage from "../images/js.jpg"
+import CsharpImage from "../images/cSharp.jpg"
+import GraphQLImage from "../images/graphql.png"
+import ApolloImage from "../images/apollo.png"
+import PHPImage from "../images/php.png"
+import CSSImagae from "../images/css.png"
+import AWSImage from "../images/aws.jpg"
 import {
-  defaultForm,
   JavaScriptForm,
   ReactForm,
   CSharpForm,
@@ -21,23 +27,12 @@ export default function Skills() {
   const [click, setclick] = useState(0)
 
   const useStyles = makeStyles(theme => ({
-    diagonalbox: {
-      position: "relative",
-      backgroundImage: `url(${NoteBook})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      transform: "skewY(-11deg)",
-      height: "20em",
-      marginTop: "5em",
-      margin: "0",
-      width: "100%",
-    },
     content1: {
       maxWidth: "50%",
       margin: "0 auto",
       paddingTop: "10px",
       color: "#7B7F7C",
-      transform: "skewY(11deg)",
+
       backgroundColor: "#e9ecf2",
       height: "25em",
       justifyContent: "center",
@@ -45,11 +40,6 @@ export default function Skills() {
       display: "flex",
       border: "solid",
       borderRadius: "10px",
-
-      // "&:hover": {
-      //   transform: " skewY(11deg) rotate(180deg)",
-      //   tranistion: "visibility 1s linear",
-      // },
     },
     content2: {
       display: "block",
@@ -74,182 +64,254 @@ export default function Skills() {
       paddingBottom: "0",
     },
 
-    navbar: {
-      background: "#A006F2",
-    },
-    list: {
-      width: "100%",
-      justifyContent: "center",
-      margin: "0 auto",
-      alignItems: "center",
-    },
-    button1: {
-      width: "8%",
-      margin: "10px auto",
-      transition: "background .2s ease, color .2s ease",
-      background: "#161716",
+    containerMain1: {
+      width: "90%",
+      height: "30%",
 
-      "&:hover": {
-        height: "20%",
-        background: "#A006F2",
-      },
-    },
-    button2: {
-      width: "10%",
-      transition: "background .2s ease, color .2s ease",
-      background: "#161716",
-
-      "&:hover": {
-        background: "#A006F2",
-        height: "20%",
-      },
-    },
-    drawer: {
-      background: "#161716",
-      alignItems: "center",
-      justifyContent: "center",
+      display: "flex",
       margin: "0 auto",
-      display: "flex",
+      justifyContent: "center",
+      background: "#3C4049",
+      flexWrap: "wrap",
     },
-    grid: {
-      width: "100%",
-      height: "10em",
-      display: "flex",
-    },
-    paper: {
-      padding: theme.spacing(4),
-      textAlign: "center",
-      color: theme.palette.text.secondary,
-      fontSize: "1.2em",
-      fontWeight: "bold",
-      border: "solid",
+    containter1: {
+      background: "grey",
+      width: "200px",
+      height: "200px",
       borderRadius: "10px",
-      boxShadow: "5px 5px black",
+      margin: "40px auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "5px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
+      backgroundImage: `url(${JsImage})`,
+      backgroundSize: "cover",
       "&:hover": {
-        background: "transparent",
-        color: "#ffffff",
-        fontWeight: "normal",
+        backgroundBlendMode: "multiply",
       },
     },
-    default: {
-      backgroundImage: `url(${Code})`,
+    containterReact: {
+      background: "grey",
+      width: "200px",
+
+      height: "200px",
+      borderRadius: "10px",
+      margin: "40px auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "5px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
+      backgroundImage: `url(${ReactJsImage})`,
       backgroundSize: "cover",
-      height: "100%",
-      width: "100%",
-      marginTop: "-10px",
-      color: "#e9ecf2",
+      "&:hover": {
+        backgroundBlendMode: "multiply",
+      },
+    },
+    containterCsharp: {
+      background: "grey",
+      width: "200px",
+
+      height: "200px",
+      borderRadius: "10px",
+      margin: "40px auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "5px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
+      backgroundImage: `url(${CsharpImage})`,
+      backgroundSize: "cover",
+      "&:hover": {
+        backgroundBlendMode: "multiply",
+      },
+    },
+    containterGraphQl: {
+      background: "grey",
+      width: "200px",
+      height: "200px",
+      borderRadius: "10px",
+      margin: "40px auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "5px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
+      backgroundImage: `url(${GraphQLImage})`,
+      backgroundSize: "cover",
+
+      "&:hover": {
+        backgroundBlendMode: "multiply",
+      },
+    },
+    containterApollo: {
+      background: "grey",
+      width: "200px",
+
+      height: "200px",
+      borderRadius: "10px",
+      margin: "40px auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "5px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
+      backgroundImage: `url(${ApolloImage})`,
+      backgroundSize: "cover",
+      "&:hover": {
+        backgroundBlendMode: "multiply",
+      },
+    },
+    containterSQL: {
+      background: "grey",
+      width: "200px",
+
+      height: "200px",
+      borderRadius: "10px",
+      margin: "40px auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "5px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
+      backgroundImage: `url(${sqlImage})`,
+      backgroundSize: "cover",
+      "&:hover": {
+        backgroundBlendMode: "multiply",
+      },
+    },
+    containerPHP: {
+      background: "grey",
+      width: "200px",
+      height: "200px",
+      borderRadius: "10px",
+      margin: "40px auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "5px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
+      backgroundImage: `url(${PHPImage})`,
+      backgroundSize: "cover",
+      "&:hover": {
+        backgroundBlendMode: "multiply",
+      },
+    },
+    containterCSS: {
+      background: "grey",
+      width: "200px",
+      height: "200px",
+      borderRadius: "10px",
+      margin: "40px auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "5px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
+      backgroundImage: `url(${CSSImagae})`,
+      backgroundSize: "cover",
+      "&:hover": {
+        backgroundBlendMode: "multiply",
+      },
+    },
+    containterAWS: {
+      background: "grey",
+      width: "200px",
+      height: "200px",
+      borderRadius: "10px",
+      margin: "40px auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "5px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
+      backgroundImage: `url(${AWSImage})`,
+      backgroundSize: "cover",
+      "&:hover": {
+        backgroundBlendMode: "multiply",
+      },
+    },
+    clickView: {
+      width: "400px",
+      height: "400px",
+      borderRadius: "10px",
+      margin: "0 auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "5px solid #201c1c",
+      boxShadow: "5px 5px 3px  #201c1c",
     },
   }))
   const classes = useStyles()
 
-  function renderForm() {
-    switch (click) {
-      case 0:
-        return defaultForm
-      case 1:
-        return JavaScriptForm
-      case 2:
-        return ReactForm
-      case 3:
-        return CSharpForm
-      case 4:
-        return PHPForm
-      case 5:
-        return GraphQLForm
-      case 6:
-        return SQLForm
-      case 7:
-        return CSSForm
-      case 8:
-        return AWSForm
-      case 9:
-        return ApolloForm
-
-      default:
-        break
-    }
-  }
-
   return (
     <div
       style={{
-        background: "#444543",
-
-        height: "60em",
-        marginTop: "10em",
+        background: "#3C4049",
       }}
     >
       <h1 className={classes.headNote}>
         Skills <BuildIcon />
       </h1>
-      <div>
-        <Grid
-          container
-          spacing={4}
-          style={{
-            alignItems: "center",
-            alignContent: "center",
-            margin: "0 auto",
-          }}
+      <div className={classes.containerMain1}>
+        <div
+          onClick={() => setclick(1)}
+          className={click === 1 ? classes.clickView : classes.containter1}
         >
-          <Grid item>
-            <Paper
-              style={{
-                hover: {
-                  backgroundImage: `url(${JavaScript})`,
-                  backgroundSize: "center",
-                },
-              }}
-              onClick={() => setclick(1)}
-              className={classes.paper}
-            >
-              JavaScript
-            </Paper>
-          </Grid>
-          <Grid item>
-            <Paper onClick={() => setclick(2)} className={classes.paper}>
-              React JS
-            </Paper>
-          </Grid>
-          <Grid item>
-            <Paper onClick={() => setclick(3)} className={classes.paper}>
-              CSharp
-            </Paper>
-          </Grid>
-          <Grid item>
-            <Paper onClick={() => setclick(5)} className={classes.paper}>
-              GraphQl
-            </Paper>
-          </Grid>
-          <Grid item>
-            <Paper onClick={() => setclick(9)} className={classes.paper}>
-              Apollo
-            </Paper>
-          </Grid>
-          <Grid item>
-            <Paper onClick={() => setclick(6)} className={classes.paper}>
-              SQL
-            </Paper>
-          </Grid>
-          <Grid item>
-            <Paper onClick={() => setclick(4)} className={classes.paper}>
-              PHP
-            </Paper>
-          </Grid>
-          <Grid item>
-            <Paper onClick={() => setclick(7)} className={classes.paper}>
-              CSS
-            </Paper>
-          </Grid>
-          <Grid item>
-            <Paper onClick={() => setclick(8)} className={classes.paper}>
-              AWS
-            </Paper>
-          </Grid>
-        </Grid>
-      </div>
-      <div className={classes.diagonalbox}>
-        <div className={classes.content1}>{renderForm()}</div>
+          {click === 1 ? JavaScriptForm : ""}
+        </div>
+        <div
+          onClick={() => setclick(2)}
+          className={click === 2 ? classes.clickView : classes.containterReact}
+        >
+          {click === 2 ? ReactForm : ""}
+        </div>
+        <div
+          onClick={() => setclick(3)}
+          className={click === 3 ? classes.clickView : classes.containterCsharp}
+        >
+          {click === 3 ? CSharpForm : ""}
+        </div>
+        <div
+          onClick={() => setclick(5)}
+          className={
+            click === 5 ? classes.clickView : classes.containterGraphQl
+          }
+        >
+          {click === 5 ? GraphQLForm : ""}
+        </div>
+        <div
+          onClick={() => setclick(9)}
+          className={click === 9 ? classes.clickView : classes.containterApollo}
+        >
+          {click === 9 ? ApolloForm : ""}
+        </div>
+        <div
+          onClick={() => setclick(6)}
+          className={click === 6 ? classes.clickView : classes.containterSQL}
+        >
+          {click === 6 ? SQLForm : ""}
+        </div>
+        <div
+          onClick={() => setclick(4)}
+          className={click === 4 ? classes.clickView : classes.containerPHP}
+        >
+          {click === 4 ? PHPForm : ""}
+        </div>
+        <div
+          onClick={() => setclick(7)}
+          className={click === 7 ? classes.clickView : classes.containterCSS}
+        >
+          {click === 7 ? CSSForm : ""}
+        </div>
+        <div
+          onClick={() => setclick(8)}
+          className={click === 8 ? classes.clickView : classes.containterAWS}
+        >
+          {click === 8 ? AWSForm : ""}
+        </div>
       </div>
     </div>
   )

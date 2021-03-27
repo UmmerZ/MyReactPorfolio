@@ -1,7 +1,8 @@
 import React from "react"
+import Footer from "./Footer"
 import FrontPage from "./FrontPage"
 import Navbar from "./Navbar"
-import Projects from "./Projects"
+import Projects from "./projects/Projects"
 import Skills from "./skills/Skills"
 
 export default function HomePage() {
@@ -11,6 +12,7 @@ export default function HomePage() {
       <FrontPage />
       <Skills />
       <Projects />
+      <Footer />
     </div>
   )
 }

@@ -10,6 +10,7 @@
 
 # production
 /build
+server.jsx
 
 # misc
 .DS_Store
