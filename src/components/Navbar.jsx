@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react"
-
+import {Link }from "react-router-dom"
 import {
   AppBar,
   Toolbar,
   Button,
   makeStyles,
   List,
-  Link,
+
  
 } from "@material-ui/core"
 import HomeIcon from "@material-ui/icons/Home"
@@ -80,7 +80,7 @@ export default function Navbar() {
     <div style={{ margin:"0", padding:"0", }}>
     <List>
     <Button className={classes.mobilebutton} color="inherit">
-        <Link className={classes.link} href="/MyReactPortfolio">
+        <Link className={classes.link} to="/MyReactPortfolio">
           Home
         </Link>
       </Button>
@@ -90,13 +90,13 @@ export default function Navbar() {
       </Button>
       <hr/>
       <Button className={classes.mobilebutton} color="inherit">
-        <Link className={classes.link} href="/contact">
+        <Link className={classes.link} to="/contact">
           Contact
         </Link>
       </Button>
       <hr/>
       <Button className={classes.mobilebutton} color="inherit">
-        <Link className={classes.link} href="/resume">
+        <Link className={classes.link} to="/resume">
           Resume
         </Link>
       </Button>
@@ -114,7 +114,7 @@ export default function Navbar() {
   const fullWidthMenu = (
     <List>
       <Button className={classes.buttons} color="inherit">
-        <Link className={classes.link} href="/MyReactPortfolio">
+        <Link className={classes.link} to="/MyReactPortfolio/">
           <HomeIcon />
         </Link>
       </Button>
@@ -123,12 +123,12 @@ export default function Navbar() {
         Gallery
       </Button>
       <Button className={classes.buttons} color="inherit">
-        <Link className={classes.link} href="/contact">
+        <Link className={classes.link} to="/contact">
           Contact
         </Link>
       </Button>
       <Button className={classes.buttons} color="inherit">
-        <Link className={classes.link} href="resume">
+        <Link className={classes.link} to="resume">
           Resume
         </Link>
       </Button>
