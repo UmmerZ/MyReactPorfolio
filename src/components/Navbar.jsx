@@ -7,7 +7,7 @@ import {
   makeStyles,
   List,
   Link,
-  useMediaQuery,
+ 
 } from "@material-ui/core"
 import HomeIcon from "@material-ui/icons/Home"
 import MenuIcon from "@material-ui/icons/Menu"
@@ -21,11 +21,13 @@ export default function Navbar() {
       textDecoration: "none",
       "&:hover": {
         backgroundColor: "grey",
+        
       },
     },
     navbar: {
       backgroundColor: "transparent",
       boxShadow: "none",
+     
     },
     scrolled: {
       position: "fixed",
@@ -44,10 +46,19 @@ export default function Navbar() {
         textDecoration: "none",
       },
     },
+    mobilebutton:{
+      display: "block",
+      color:"#ffffff"
+      
+    }
   }))
   const classes = useStyle()
   const [scrolled, setScrolled] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const [ismobileMenu, setIsMobileMenu] = useState(window.innerWidth)
+
+ const breakPoint = 650
+
   const handleScroll = () => {
     const offset = window.scrollY
     if (offset > 10) {
@@ -57,16 +68,49 @@ export default function Navbar() {
     }
   }
   const handleResize = () => {
-    if (window.innerWidth < 720) {
-      setIsMobile(true)
-    } else {
-      setIsMobile(false)
-    }
+   setIsMobileMenu(window.innerWidth)
   }
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
     window.addEventListener("resize", handleResize)
-  })
+    return () => window.removeEventListener("resize", handleResize)
+    
+  },[])
+  const mobileMenu =(
+    <div style={{ margin:"0", padding:"0", }}>
+    <List>
+    <Button className={classes.mobilebutton} color="inherit">
+        <Link className={classes.link} href="/MyReactPortfolio">
+          Home
+        </Link>
+      </Button>
+<hr/>
+      <Button className={classes.mobilebutton} color="inherit">
+        Gallery
+      </Button>
+      <hr/>
+      <Button className={classes.mobilebutton} color="inherit">
+        <Link className={classes.link} href="/contact">
+          Contact
+        </Link>
+      </Button>
+      <hr/>
+      <Button className={classes.mobilebutton} color="inherit">
+        <Link className={classes.link} href="/MyReactPortfolio/resume">
+          Resume
+        </Link>
+      </Button>
+      <hr/>
+      <Button className={classes.mobilebutton} color="inherit">
+        <Link className={classes.link} to="/about-me">
+          About Me
+        </Link>
+      </Button>
+
+    </List>
+    </div>
+  )
+
   const fullWidthMenu = (
     <List>
       <Button className={classes.buttons} color="inherit">
@@ -95,10 +139,10 @@ export default function Navbar() {
       </Button>
     </List>
   )
-  const mobileMenu = (
+  const mobileNavbar = (
     <List className={classes.list}>
       <Button className={classes.buttons} color="inherit">
-        <MenuIcon />
+        <MenuIcon    onClick={()=> setIsMobile(value => !value)}/>
       </Button>
     </List>
   )
@@ -109,9 +153,10 @@ export default function Navbar() {
         className={scrolled ? classes.scrolled : classes.navbar}
       >
         <Toolbar variant="dense">
-          {isMobile ? mobileMenu : fullWidthMenu}
+          {ismobileMenu  < breakPoint  ? mobileNavbar : fullWidthMenu}
         </Toolbar>
       </AppBar>
+      {isMobile && ismobileMenu < breakPoint ? mobileMenu : ""}
     </div>
   )
 }
