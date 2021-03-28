@@ -1,59 +1,52 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core"
 import Navbar from "./Navbar"
+import Nature from "./images/mushroom.jpg"
+import Footer from "./Footer"
+import { aboutMeBio } from "./skills/forms"
 
 export default function AboutMe() {
   const useStyles = makeStyles(theme => ({
-    diagonalbox: {
-      position: "relative",
-      backgroundImage: "linear-gradient(45deg, #171717, #292A29)",
-      transform: "skewY(-11deg)",
-      height: "20em",
-      marginTop: "5em",
-      margin: "0",
-      width: "100%",
-    },
+   
     content1: {
-      maxWidth: "40em",
-      margin: "200px auto",
-      color: "#7B7F7C",
-      transform: "skewY(11deg)",
-      position: "relative",
-
-      height: "20em",
+    width:"30%",
+    height:"80%",
+    float:"right",
+    background:"transparent",
+    position:"absolute",
+    right:"10px"
+   
     },
-    content2: {
-      width: "50%",
-      color: "#161716",
-      background: "#7B7F7C",
-      height: "20em",
-      float: "left",
+    containerMain:{
+      width:"100%",
+      height:"60em",
+      backgroundImage: `url(${Nature})`,
+      backgroundSize:"cover",
+      
+      
     },
-    content3: {
-      width: "50%",
-      color: "#7B7F7C",
-      background: "black",
-      height: "20em",
-      float: "right",
+    containerSub:{
+      height:"100%",
+      weight:"100%",
+      display:"flex",
+     
     },
-    title: {
-      maxWidth: "80%",
-      margin: "20px 20px 20px 20px",
-      padding: "10px",
-    },
-    image: { width: "100%", height: "80%" },
+    text:{
+      color:"#ffffff"
+    }
+   
   }))
   const classes = useStyles()
   return (
-    <div><Navbar />
-      <h1 style={{ color: "#ffffff" }}>About me</h1>
-      <div className={classes.diagonalbox}>
-        <div className={classes.content1}>
-          <div className={classes.content2}>
-            <p>My name is Ummer</p>
-          </div>
-        </div>
+    <div className={classes.containerMain}> 
+      <Navbar />
+      <div className={classes.containerSub}>
+      <div className={classes.content1}>
+        <h2 >{aboutMeBio} </h2>
       </div>
     </div>
+    <Footer />
+    </div>
+    
   )
 }
