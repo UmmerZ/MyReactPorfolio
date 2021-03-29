@@ -1,9 +1,12 @@
 import React from "react"
 import DownloadLink from "react-download-link"
+import { useAuth } from "../Context"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 
 export default function Resume() {
+  const { isMobile, breakPoint } = useAuth()
+
   const getDataFromURL = url =>
     new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -27,11 +30,15 @@ export default function Resume() {
         }}
       >
         <div
-          style={{
-            width: "70%",
-            height: "100%",
-            background: "#BDBDBD",
-          }}
+          style={
+            isMobile < breakPoint
+              ? { color: "#ffffff" }
+              : {
+                  width: "70%",
+                  height: "100%",
+                  background: "#BDBDBD",
+                }
+          }
         >
           <div style={{ width: "90%", margin: "20px auto" }}>
             <h1>UMMER ZAMAN</h1>{" "}
