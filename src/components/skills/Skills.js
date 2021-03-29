@@ -71,11 +71,11 @@ export default function Skills() {
       display: "flex",
       margin: "0 auto",
       justifyContent: "center",
-      background: "#3C4049",
+      background: "0e160e",
       flexWrap: "wrap",
     },
     containter1: {
-      background: "grey",
+      background: "#0e160e",
       width: "200px",
       height: "200px",
       borderRadius: "10px",
@@ -249,7 +249,7 @@ export default function Skills() {
   return (
     <div
       style={{
-        background: "#3C4049",
+        background: "0e160e",
       }}
     >
       <h1 className={classes.headNote}>

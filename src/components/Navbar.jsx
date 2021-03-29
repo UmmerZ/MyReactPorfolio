@@ -1,16 +1,9 @@
 import React, { useState, useEffect } from "react"
-import {Link }from "react-router-dom"
-import {
-  AppBar,
-  Toolbar,
-  Button,
-  makeStyles,
-  List,
-
- 
-} from "@material-ui/core"
+import { Link } from "react-router-dom"
+import { AppBar, Toolbar, Button, makeStyles, List } from "@material-ui/core"
 import HomeIcon from "@material-ui/icons/Home"
 import MenuIcon from "@material-ui/icons/Menu"
+import { useAuth } from "../Context"
 
 export default function Navbar() {
   const useStyle = makeStyles(theme => ({
@@ -21,13 +14,11 @@ export default function Navbar() {
       textDecoration: "none",
       "&:hover": {
         backgroundColor: "grey",
-        
       },
     },
     navbar: {
       backgroundColor: "transparent",
       boxShadow: "none",
-     
     },
     scrolled: {
       position: "fixed",
@@ -46,18 +37,16 @@ export default function Navbar() {
         textDecoration: "none",
       },
     },
-    mobilebutton:{
+    mobilebutton: {
       display: "block",
-      color:"#ffffff"
-      
-    }
+      color: "#ffffff",
+    },
   }))
   const classes = useStyle()
   const [scrolled, setScrolled] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
-  const [ismobileMenu, setIsMobileMenu] = useState(window.innerWidth)
+  const [ismobileMenu, setIsMobileMenu] = useState(false)
 
- const breakPoint = 650
+  const { isMobile, breakPoint } = useAuth()
 
   const handleScroll = () => {
     const offset = window.scrollY
@@ -67,47 +56,41 @@ export default function Navbar() {
       setScrolled(false)
     }
   }
-  const handleResize = () => {
-   setIsMobileMenu(window.innerWidth)
-  }
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-    
-  },[])
-  const mobileMenu =(
-    <div style={{ margin:"0", padding:"0", }}>
-    <List>
-    <Button className={classes.mobilebutton} color="inherit">
-        <Link className={classes.link} to="/">
-          Home
-        </Link>
-      </Button>
-<hr/>
-      <Button className={classes.mobilebutton} color="inherit">
-        Gallery
-      </Button>
-      <hr/>
-      <Button className={classes.mobilebutton} color="inherit">
-        <Link className={classes.link} to="/contact">
-          Contact
-        </Link>
-      </Button>
-      <hr/>
-      <Button className={classes.mobilebutton} color="inherit">
-        <Link className={classes.link} to="/resume">
-          Resume
-        </Link>
-      </Button>
-      <hr/>
-      <Button className={classes.mobilebutton} color="inherit">
-        <Link className={classes.link} to="/about-me">
-          About Me
-        </Link>
-      </Button>
-
-    </List>
+  }, [])
+  const mobileMenu = (
+    <div style={{ margin: "0", padding: "0" }}>
+      <List>
+        <Button className={classes.mobilebutton} color="inherit">
+          <Link className={classes.link} to="/">
+            Home
+          </Link>
+        </Button>
+        <hr />
+        <Button className={classes.mobilebutton} color="inherit">
+          Gallery
+        </Button>
+        <hr />
+        <Button className={classes.mobilebutton} color="inherit">
+          <Link className={classes.link} to="/contact">
+            Contact
+          </Link>
+        </Button>
+        <hr />
+        <Button className={classes.mobilebutton} color="inherit">
+          <Link className={classes.link} to="/resume">
+            Resume
+          </Link>
+        </Button>
+        <hr />
+        <Button className={classes.mobilebutton} color="inherit">
+          <Link className={classes.link} to="/about-me">
+            About Me
+          </Link>
+        </Button>
+      </List>
     </div>
   )
 
@@ -142,21 +125,21 @@ export default function Navbar() {
   const mobileNavbar = (
     <List className={classes.list}>
       <Button className={classes.buttons} color="inherit">
-        <MenuIcon    onClick={()=> setIsMobile(value => !value)}/>
+        <MenuIcon onClick={() => setIsMobileMenu(value => !value)} />
       </Button>
     </List>
   )
   return (
-    <div style={{ marginTop: "20px" }}>
+    <div style={{ marginTop: "20px" }} mobile>
       <AppBar
         position="static"
         className={scrolled ? classes.scrolled : classes.navbar}
       >
         <Toolbar variant="dense">
-          {ismobileMenu  < breakPoint  ? mobileNavbar : fullWidthMenu}
+          {isMobile < breakPoint ? mobileNavbar : fullWidthMenu}
         </Toolbar>
       </AppBar>
-      {isMobile && ismobileMenu < breakPoint ? mobileMenu : ""}
+      {ismobileMenu && isMobile < breakPoint ? mobileMenu : ""}
     </div>
   )
 }

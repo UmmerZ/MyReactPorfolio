@@ -24,7 +24,7 @@ export default function Projects() {
       display: "flex",
       margin: "0 auto",
       justifyContent: "center",
-      background: "#3C4049",
+      background: "#0e160e",
       flexWrap: "wrap",
     },
     containerMain2: {
@@ -34,7 +34,7 @@ export default function Projects() {
       display: "flex",
       justifyContent: "center",
       margin: "0 auto",
-      background: "#444543",
+      background: "#0e160e",
     },
     containter1: {
       background: "grey",

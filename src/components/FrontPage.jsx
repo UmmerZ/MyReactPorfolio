@@ -3,79 +3,59 @@ import { makeStyles } from "@material-ui/core"
 import Lion from "./images/lion.jpg"
 import GrandCanyon from "./images/grandcanyon.jpg"
 import Highway15Image from "./images/highway15.jpg"
-
+import mushroom from "./images/mushroom.jpg"
+import { useAuth } from "../Context"
 export default function FrontPage() {
   const [swap, setswap] = useState(0)
+  const { isMobile } = useAuth()
+  const breakPoint = 750
   const useStyle = makeStyles(theme => ({
     containerMain: {
-      display: "flex",
+      backgroundImage: `url(${mushroom})`,
+      backgroundSize: "cover",
     },
+
     container1: {
-      width: "900px",
-      height: "500px",
-      margin: "100px auto",
-      color: "#7B7F7C",
-      borderRadius: "10px",
-      position: "relative",
-      backgroundImage: `url(${Lion})`,
-      backgroundSize: "cover",
-
-      boxShadow: "5px 5px 3px  #201c1c",
+      width: "40%",
+      height: "100%",
+      float: "right",
+      background: "transparent",
+      position: "absolute",
+      right: "10px",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
     },
-    container2: {
-      width: "900px",
-      height: "500px",
-      margin: "100px auto",
-      color: "#7B7F7C",
-      borderRadius: "10px",
-      position: "relative",
-      backgroundImage: `url(${GrandCanyon})`,
-      backgroundSize: "cover",
-      boxShadow: "5px 5px 3px  #201c1c",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-    },
-    container3: {
-      width: "900px",
-      height: "500px",
-      margin: "100px auto",
-      color: "#7B7F7C",
-      borderRadius: "10px",
-      position: "relative",
-      backgroundImage: `url(${Highway15Image})`,
-      backgroundSize: "cover",
-
-      boxShadow: "5px 5px 3px  #201c1c",
+    containerMobile: {
+      width: "80%",
+      height: "100%",
+      float: "right",
+      background: "transparent",
+      position: "absolute",
+      right: "10px",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
     },
 
     title: {
-      maxWidth: "50%",
-      marginTop: "50px",
-      padding: "10px",
+      maxWidth: "100%",
       animation: "$textanimation 5s ",
       color: "#ffffff",
     },
 
-    title1: {
-      maxWidth: "50%",
-      marginTop: "50px",
-      padding: "10px",
-      animation: "$textanimation 5s ",
-      color: "#ffffff",
+    bold: {
+      textDecoration: "none",
+      color: "#C2A22B",
+      background: "transparent",
+      fontSize: "50px",
     },
-    title2: {
-      maxWidth: "50%",
-      marginTop: "50px",
-      padding: "10px",
-      animation: "$textanimation 5s ",
-      color: "#ffffff",
+    bold2: {
+      textDecoration: "none",
+      color: "#C2A22B",
+      background: "transparent",
+      fontSize: "30px",
+      marginLeft: "10px",
     },
     "@keyframes textanimation": {
       from: {
@@ -85,51 +65,103 @@ export default function FrontPage() {
         opacity: "1px",
       },
     },
+    containerSub: {
+      height: "45em",
+      weight: "80%",
+      display: "flex",
+    },
+    h2: {
+      color: "#ffffff",
+      fontWeight: "normal",
+      fontSize: "20px",
+    },
 
     image: { width: "100%", height: "80%" },
-    arrowRight: {
-      border: "solid black",
-      borderWidth: "0 3px 3px 0",
+    arrow: {
+      border: "solid #ffffff",
+      borderWidth: "0 0 3px 0",
       display: "inline-block",
       padding: "10px",
-      transform: "rotate(-45deg)",
-      WebkitTransform: "rotate(-45deg)",
+      marginRight: "10px",
+      bottom: "0",
     },
-    arrowLeft: {
-      border: "solid black",
-      borderWidth: "0 3px 3px 0",
+    arrowSelected: {
+      border: "solid 5px #35be44",
+      borderWidth: "0 0 3px 0",
       display: "inline-block",
       padding: "10px",
-      transform: "rotate(45deg)",
-      WebkitTransform: "rotate(135deg)",
+      marginRight: "10px",
+      bottom: "0",
     },
+
     arrowdiv: {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      margin: "0 auto",
-      padding: "0 auto",
+      margin: "0",
+      padding: "0",
+      bottom: "250px",
+      position: "absolute",
     },
   }))
   const classes = useStyle()
   const bioDefaultForm = (
-    <div className={classes.container1}>
-      <h1 className={classes.title}>
-        Hello! My Name is Ummer. I am a Web Developer{" "}
-      </h1>
+    <div
+      style={{
+        display: "inline-block",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <h1 className={classes.title}>Hello! </h1>
+      <p className={classes.h2}>
+        My Name is <br />
+        <a className={classes.bold}>
+          UMMER. <br />
+        </a>
+        I am a Web Developer by profession
+        <br />
+        I code on WEEKDAYS
+        <br />
+        & <br />I debug on WEEKENDS
+      </p>
     </div>
   )
 
   const grandCanyonForm = (
-    <div className={classes.container2}>
-      <h1 className={classes.title1}>
-        I love discovering nature. Traveling makes me happy!{" "}
-      </h1>
+    <div>
+      <p className={classes.h2}>
+        <a className={classes.bold}>
+          IF <br />
+        </a>
+        You want State of the Art UI
+        <a className={classes.bold2}>Hire Me!</a>
+        <br />
+        <a className={classes.bold}>
+          IF <br />
+        </a>
+        You want server running at Lightning Speeds
+        <a className={classes.bold2}>Hire Me!</a> <br />
+        <a className={classes.bold}>
+          IF <br />
+        </a>
+        You want to you Releational or Graph Databases
+        <a className={classes.bold2}>Hire Me!</a>
+      </p>
     </div>
   )
   const highway15Form = (
-    <div className={classes.container3}>
-      <h1 className={classes.title2}>Everyday I Code! </h1>
+    <div>
+      <p className={classes.h2}>
+        <a className={classes.bold}>Favorite Quote</a> <br />
+        The best programs are written so that computing machines can perform
+        them quickly and so that human beings can understand them clearly. A
+        programmer is ideally an essayist who works with traditional aesthetic
+        and literary forms as well as mathematical concepts, to communicate the
+        way that an algorithm works and to convince a reader that the results
+        will be correct.
+        <a className={classes.bold2}>― Donald E. Knuth, </a>
+      </p>
     </div>
   )
   function handleSwap() {
@@ -146,26 +178,30 @@ export default function FrontPage() {
   }
   return (
     <div className={classes.containerMain}>
-      <div className={classes.arrowdiv}>
-        {swap >= 0 ? (
-          <i
-            className={classes.arrowLeft}
-            onClick={() => setswap(swap - 1)}
-          ></i>
-        ) : (
-          ""
-        )}
-      </div>
-      {handleSwap()}
-      <div className={classes.arrowdiv}>
-        {swap <= 0 ? (
-          <i
-            className={classes.arrowRight}
-            onClick={() => setswap(swap + 1)}
-          ></i>
-        ) : (
-          ""
-        )}
+      <div className={classes.containerSub}>
+        <div
+          className={
+            isMobile > breakPoint ? classes.container1 : classes.containerMobile
+          }
+        >
+          {handleSwap()}
+          <div className={classes.arrowdiv}>
+            <i
+              className={swap === -1 ? classes.arrowSelected : classes.arrow}
+              onClick={() => setswap(-1)}
+            ></i>
+
+            <i
+              className={swap === 0 ? classes.arrowSelected : classes.arrow}
+              onClick={() => setswap(0)}
+            ></i>
+
+            <i
+              className={swap === 1 ? classes.arrowSelected : classes.arrow}
+              onClick={() => setswap(1)}
+            ></i>
+          </div>
+        </div>
       </div>
     </div>
   )
