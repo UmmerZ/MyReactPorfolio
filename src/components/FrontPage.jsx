@@ -1,8 +1,5 @@
 import React, { useState } from "react"
 import { makeStyles } from "@material-ui/core"
-import Lion from "./images/lion.jpg"
-import GrandCanyon from "./images/grandcanyon.jpg"
-import Highway15Image from "./images/highway15.jpg"
 import mushroom from "./images/mushroom.jpg"
 import { useAuth } from "../Context"
 export default function FrontPage() {
@@ -100,7 +97,7 @@ export default function FrontPage() {
       justifyContent: "center",
       margin: "0",
       padding: "0",
-      bottom: "250px",
+      bottom: "200px",
       position: "absolute",
     },
   }))
@@ -116,9 +113,9 @@ export default function FrontPage() {
       <h1 className={classes.title}>Hello! </h1>
       <p className={classes.h2}>
         My Name is <br />
-        <a className={classes.bold}>
+        <span className={classes.bold}>
           UMMER. <br />
-        </a>
+        </span>
         I am a Web Developer by profession
         <br />
         I code on WEEKDAYS
@@ -131,36 +128,36 @@ export default function FrontPage() {
   const grandCanyonForm = (
     <div>
       <p className={classes.h2}>
-        <a className={classes.bold}>
+        <span className={classes.bold}>
           IF <br />
-        </a>
+        </span>
         You want State of the Art UI
-        <a className={classes.bold2}>Hire Me!</a>
+        <span className={classes.bold2}>Hire Me!</span>
         <br />
-        <a className={classes.bold}>
+        <span className={classes.bold}>
           IF <br />
-        </a>
+        </span>
         You want server running at Lightning Speeds
-        <a className={classes.bold2}>Hire Me!</a> <br />
-        <a className={classes.bold}>
+        <span className={classes.bold2}>Hire Me!</span> <br />
+        <span className={classes.bold}>
           IF <br />
-        </a>
+        </span>
         You want to you Releational or Graph Databases
-        <a className={classes.bold2}>Hire Me!</a>
+        <span className={classes.bold2}>Hire Me!</span>
       </p>
     </div>
   )
   const highway15Form = (
     <div>
       <p className={classes.h2}>
-        <a className={classes.bold}>Favorite Quote</a> <br />
+        <span className={classes.bold}>Favorite Quote</span> <br />
         The best programs are written so that computing machines can perform
         them quickly and so that human beings can understand them clearly. A
         programmer is ideally an essayist who works with traditional aesthetic
         and literary forms as well as mathematical concepts, to communicate the
         way that an algorithm works and to convince a reader that the results
         will be correct.
-        <a className={classes.bold2}>― Donald E. Knuth, </a>
+        <span className={classes.bold2}>― Donald E. Knuth, </span>
       </p>
     </div>
   )

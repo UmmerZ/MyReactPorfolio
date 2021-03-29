@@ -130,7 +130,7 @@ export default function Navbar() {
     </List>
   )
   return (
-    <div style={{ marginTop: "20px" }} mobile>
+    <div style={{ marginTop: "20px" }}>
       <AppBar
         position="static"
         className={scrolled ? classes.scrolled : classes.navbar}

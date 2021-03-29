@@ -1,6 +1,5 @@
 import React from "react"
 import DownloadLink from "react-download-link"
-import { useAuth } from "../Context"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 
