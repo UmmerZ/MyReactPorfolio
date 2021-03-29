@@ -23,7 +23,7 @@ function App() {
     <MyContext.Provider value={{ isMobile, breakPoint }}>
       <Router>
         <Switch>
-          <Route exact path="/" component={HomePage} />
+          <Route exact path="/MyReactPortfolio" component={HomePage} />
           <Route path="/about-me" component={AboutMe} />
           <Route path="/resume" component={Resume} />
 
