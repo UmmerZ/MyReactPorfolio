@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/MyReactPortfolio/static/css/main.6e1eb64a.chunk.css",
-    "main.js": "/MyReactPortfolio/static/js/main.056736f3.chunk.js",
-    "main.js.map": "/MyReactPortfolio/static/js/main.056736f3.chunk.js.map",
+    "main.js": "/MyReactPortfolio/static/js/main.75a334ac.chunk.js",
+    "main.js.map": "/MyReactPortfolio/static/js/main.75a334ac.chunk.js.map",
     "runtime-main.js": "/MyReactPortfolio/static/js/runtime-main.f8bcdb04.js",
     "runtime-main.js.map": "/MyReactPortfolio/static/js/runtime-main.f8bcdb04.js.map",
     "static/js/2.c7e7d393.chunk.js": "/MyReactPortfolio/static/js/2.c7e7d393.chunk.js",
@@ -18,6 +18,7 @@
     "static/media/cSharp.7653eb51.jpg": "/MyReactPortfolio/static/media/cSharp.7653eb51.jpg",
     "static/media/code.948b85dc.jpg": "/MyReactPortfolio/static/media/code.948b85dc.jpg",
     "static/media/css.023035db.png": "/MyReactPortfolio/static/media/css.023035db.png",
+    "static/media/fox.875f7c2e.jpg": "/MyReactPortfolio/static/media/fox.875f7c2e.jpg",
     "static/media/goodreels.3488e76b.jpg": "/MyReactPortfolio/static/media/goodreels.3488e76b.jpg",
     "static/media/graphql.e3a02a8f.png": "/MyReactPortfolio/static/media/graphql.e3a02a8f.png",
     "static/media/js.4d11b7ee.jpg": "/MyReactPortfolio/static/media/js.4d11b7ee.jpg",
@@ -31,6 +32,6 @@
     "static/js/runtime-main.f8bcdb04.js",
     "static/js/2.c7e7d393.chunk.js",
     "static/css/main.6e1eb64a.chunk.css",
-    "static/js/main.056736f3.chunk.js"
+    "static/js/main.75a334ac.chunk.js"
   ]
 }
