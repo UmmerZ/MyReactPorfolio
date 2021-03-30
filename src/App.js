@@ -9,6 +9,8 @@ import Resume from "./components/Resume"
 import { MyContext } from "./Context"
 
 function App() {
+  //handling layout for mobile screens
+
   const [isMobile, setIsMobile] = useState(window.innerWidth)
   const breakPoint = 750
 

@@ -48,7 +48,7 @@ export default function AboutMe() {
             isMobile < breakPoint ? classes.contentMobile : classes.content1
           }
         >
-          <h2>{aboutMeBio} </h2>
+          <div>{aboutMeBio} </div>
         </div>
       </div>
       <Footer />

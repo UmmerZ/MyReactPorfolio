@@ -59,6 +59,7 @@ export default function Navbar() {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
   }, [])
   const mobileMenu = (
     <div style={{ margin: "0", padding: "0" }}>
@@ -69,10 +70,11 @@ export default function Navbar() {
           </Link>
         </Button>
         <hr />
-        <Button className={classes.mobilebutton} color="inherit">
+
+        {/* <Button className={classes.mobilebutton} color="inherit">
           Gallery
         </Button>
-        <hr />
+        <hr /> */}
         <Button className={classes.mobilebutton} color="inherit">
           <Link className={classes.link} to="/contact">
             Contact

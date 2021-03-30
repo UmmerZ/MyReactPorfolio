@@ -231,7 +231,7 @@ export const AWSForm = (
 )
 export const aboutMeBio = (
   <div>
-    <h1 style={head}>UMMER ZAMAN</h1>
+    <h1 style={bold}>UMMER ZAMAN</h1>
     <p style={text}>
       A React JS and .Net developer who has passion for coding. Currently I work
       as a Junior Software Engineer at UnTribe working on GrandStack. I am
@@ -240,34 +240,33 @@ export const aboutMeBio = (
       use GraphQL or .NET for creating API's to to make my front end work with
       the backend. As a Junior Engineer at unTribe I have been working with
       graph database Neo4J.
-      <p />
-      <h2>Hobbies</h2>
-      <p style={text}>
-        I play video games mainly Call of Duty and FIFA <br />
-        I love to travelling whenever I get time. I am always fascinated with
-        nature. My favorite destination is Rockies
-        <br />
-        I am passionate about photography as hobby mostly nature.
-        <br />
-        If I am bored home and dont want to code or hop onto my gaming console I
-        watch netflix. I am currentlly watching The Irregulars
-      </p>
-      <h2>Favorites</h2>
-      <p>
-        Video Game: <span style={a}>FIFA</span>
-        <br />
-        Desitnation: <span style={a}>Yellowstone National Park/Banff</span>
-        <br />
-        Personality: <span style={a}>Muhammad Ali</span>
-        <br />
-        Sport: <span style={a}>Soccer</span>
-        <br />
-        Movie: <span style={a}>The A Team</span>
-        <br />
-        Programming Language: <span style={a}>React/ C#</span>
-        <br />
-        Car: <span style={a}>BMW M5 Competition</span>
-      </p>
+    </p>
+    <h2 style={head}>Hobbies</h2>
+    <p style={text}>
+      I play video games mainly Call of Duty and FIFA <br />
+      I love to travelling whenever I get time. I am always fascinated with
+      nature. My favorite destination is Rockies
+      <br />
+      I am passionate about photography as hobby mostly nature.
+      <br />
+      If I am bored home and dont want to code or hop onto my gaming console I
+      watch netflix. I am currentlly watching The Irregulars
+    </p>
+    <h2 style={head}>Favorites</h2>
+    <p style={text}>
+      Video Game: <span style={a}>FIFA</span>
+      <br />
+      Desitnation: <span style={a}>Yellowstone National Park/Banff</span>
+      <br />
+      Personality: <span style={a}>Muhammad Ali</span>
+      <br />
+      Sport: <span style={a}>Soccer</span>
+      <br />
+      Movie: <span style={a}>The A Team</span>
+      <br />
+      Programming Language: <span style={a}>React/ C#</span>
+      <br />
+      Car: <span style={a}>BMW M5 Competition</span>
     </p>
   </div>
 )
@@ -284,6 +283,24 @@ export const textForm = (
       & <br />
       Please click on the thumbnails to read the skill set I have for that
       language
+    </p>
+  </div>
+)
+export const projectTextForm = (
+  <div>
+    <h1 style={bold}>PERSONAL PROJECTS! </h1>
+    <p style={h2}>
+      I am always coding if I get some spare time I{" "}
+      <span style={head}>CODE</span> <br />
+      I have learnt most of my skills while working on my personal projects they
+      do reflect my coding.
+      <br />
+      <span style={head}>
+        Here are few of the ones I have created so far on personal side
+      </span>
+      <br />
+      & <br />
+      Please click on the thumbnails to read details
     </p>
   </div>
 )

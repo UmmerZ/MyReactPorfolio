@@ -12,7 +12,7 @@ export default function Footer() {
         background: "#1C1C1C",
       }}
     >
-      <p>© 2020 Ummer Zaman</p>
+      <p>© 2021 Ummer Zaman</p>
     </div>
   )
 }

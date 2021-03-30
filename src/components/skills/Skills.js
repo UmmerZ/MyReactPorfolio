@@ -262,7 +262,6 @@ export default function Skills() {
       <div
         style={{
           background: "transparent",
-
           display: "flex",
         }}
       >

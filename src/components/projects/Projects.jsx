@@ -7,9 +7,13 @@ import reactImage from "../images/reactrs.jpg"
 import aspDotNetImage from "../images/asp.jpg"
 import phpImage from "../images/php.png"
 import { bidACarForm, goodReelsForm, libraryForm, phpForm } from "./popupForms"
+import Fox from "../images/fox.jpg"
+import { projectTextForm } from "../skills/forms"
+import { useAuth } from "../../Context"
 
 export default function Projects() {
   const [click, setclick] = useState(0)
+  const { isMobile, breakPoint } = useAuth()
   const useStyles = makeStyles(theme => ({
     headNote: {
       color: "#ffffff",
@@ -20,17 +24,15 @@ export default function Projects() {
     containerMain1: {
       width: "90%",
       height: "30%",
-
       display: "flex",
       margin: "0 auto",
       justifyContent: "center",
-      background: "#0e160e",
+      background: "transparent",
       flexWrap: "wrap",
     },
     containerMain2: {
       width: "90%",
       height: "30%",
-
       display: "flex",
       justifyContent: "center",
       margin: "0 auto",
@@ -42,8 +44,6 @@ export default function Projects() {
       borderRadius: "10px",
       height: "200px",
       margin: "40px auto",
-      border: "5px solid #201c1c",
-      boxShadow: "5px 5px 3px  #201c1c",
       backgroundImage: `url(${cSharp})`,
       backgroundSize: "cover",
       "&:hover": {
@@ -55,13 +55,9 @@ export default function Projects() {
     containter2: {
       background: "grey",
       width: "200px",
-
       height: "200px",
       borderRadius: "10px",
       margin: "40px auto",
-
-      border: "5px solid #201c1c",
-      boxShadow: "5px 5px 3px  #201c1c",
       backgroundImage: `url(${reactImage})`,
       backgroundSize: "cover",
       "&:hover": {
@@ -72,26 +68,18 @@ export default function Projects() {
     containter3: {
       background: "grey",
       width: "200px",
-
       height: "200px",
       borderRadius: "10px",
       margin: "40px auto",
-
-      border: "5px solid #201c1c",
-      boxShadow: "5px 5px 3px  #201c1c",
       backgroundImage: `url(${aspDotNetImage})`,
       backgroundSize: "cover",
     },
     containter4: {
       background: "grey",
       width: "200px",
-
       height: "200px",
       borderRadius: "10px",
       margin: "40px auto",
-
-      border: "5px solid #201c1c",
-      boxShadow: "5px 5px 3px  #201c1c",
       backgroundImage: `url(${phpImage})`,
       backgroundSize: "cover",
     },
@@ -117,8 +105,16 @@ export default function Projects() {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      border: "5px solid #201c1c",
-      boxShadow: "5px 5px 3px  #201c1c",
+    },
+    containerText: {
+      height: "100%",
+      width: "50%",
+      color: "white",
+      right: "0",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      margin: "10px 10px 10px 10px",
     },
   }))
   const classes = useStyles()
@@ -126,69 +122,79 @@ export default function Projects() {
   return (
     <div
       style={{
-        height: "100%",
-        width: "100%",
-
-        alignContent: "center",
-        alignItems: "center",
+        backgroundImage: `url(${Fox})`,
+        backgroundSize: "cover",
       }}
     >
       <h1 className={classes.headNote}>Projects</h1>
-      <div className={classes.containerMain1}>
-        <div
-          className={click === 1 ? classes.clickView : classes.containter1}
-          onClick={() => setclick(1)}
-        >
-          {click === 1 ? bidACarForm : ""}
-          <div>
-            {click === 1 ? (
-              ""
-            ) : (
-              <Paper className={classes.paper}>Bid-A-Car</Paper>
-            )}
+      <div
+        style={{
+          background: "transparent",
+          display: "flex",
+        }}
+      >
+        <div className={classes.containerMain1}>
+          {isMobile < breakPoint ? <div>{projectTextForm}</div> : ""}
+          <div
+            className={click === 1 ? classes.clickView : classes.containter1}
+            onClick={() => setclick(1)}
+          >
+            {click === 1 ? bidACarForm : ""}
+            <div>
+              {click === 1 ? (
+                ""
+              ) : (
+                <Paper className={classes.paper}>Bid-A-Car</Paper>
+              )}
+            </div>
           </div>
-        </div>
 
-        <div
-          className={click === 2 ? classes.clickView : classes.containter2}
-          onClick={() => setclick(2)}
-        >
-          {click === 2 ? goodReelsForm : ""}
-          <div>
-            {click === 2 ? (
-              ""
-            ) : (
-              <Paper className={classes.paper}>GoodReels</Paper>
-            )}
+          <div
+            className={click === 2 ? classes.clickView : classes.containter2}
+            onClick={() => setclick(2)}
+          >
+            {click === 2 ? goodReelsForm : ""}
+            <div>
+              {click === 2 ? (
+                ""
+              ) : (
+                <Paper className={classes.paper}>GoodReels</Paper>
+              )}
+            </div>
           </div>
-        </div>
 
-        <div
-          className={click === 3 ? classes.clickView : classes.containter3}
-          onClick={() => setclick(3)}
-        >
-          {click === 3 ? libraryForm : ""}
-          <div>
-            {click === 3 ? (
-              ""
-            ) : (
-              <Paper className={classes.paper}>Library Management</Paper>
-            )}
+          <div
+            className={click === 3 ? classes.clickView : classes.containter3}
+            onClick={() => setclick(3)}
+          >
+            {click === 3 ? libraryForm : ""}
+            <div>
+              {click === 3 ? (
+                ""
+              ) : (
+                <Paper className={classes.paper}>Library Management</Paper>
+              )}
+            </div>
+          </div>
+          <div
+            className={click === 4 ? classes.clickView : classes.containter4}
+            onClick={() => setclick(4)}
+          >
+            {click === 4 ? phpForm : ""}
+            <div>
+              {click === 4 ? (
+                ""
+              ) : (
+                <Paper className={classes.paper}>Corinates Information</Paper>
+              )}
+            </div>
           </div>
         </div>
-        <div
-          className={click === 4 ? classes.clickView : classes.containter4}
-          onClick={() => setclick(4)}
-        >
-          {click === 4 ? phpForm : ""}
-          <div>
-            {click === 4 ? (
-              ""
-            ) : (
-              <Paper className={classes.paper}>Corinates Information</Paper>
-            )}
-          </div>
-        </div>
+        {isMobile > breakPoint ? (
+          <div className={classes.containerText}>{projectTextForm}</div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   )
