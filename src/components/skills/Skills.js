@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { makeStyles } from "@material-ui/core"
 import BuildIcon from "@material-ui/icons/Build"
 import ReactJsImage from "../images/Reactjs.png"
+import Owl from "../images/owl.jpg"
 
 import sqlImage from "../images/sql.png"
 import JsImage from "../images/js.jpg"
@@ -21,10 +22,13 @@ import {
   CSSForm,
   AWSForm,
   ApolloForm,
+  textForm,
 } from "./forms"
+import { useAuth } from "../../Context"
 
 export default function Skills() {
   const [click, setclick] = useState(0)
+  const { isMobile, breakPoint } = useAuth()
 
   const useStyles = makeStyles(theme => ({
     content1: {
@@ -67,7 +71,6 @@ export default function Skills() {
     containerMain1: {
       width: "90%",
       height: "30%",
-
       display: "flex",
       margin: "0 auto",
       justifyContent: "center",
@@ -78,7 +81,6 @@ export default function Skills() {
       background: "#0e160e",
       width: "200px",
       height: "200px",
-      borderRadius: "10px",
       margin: "40px auto",
       display: "flex",
       justifyContent: "center",
@@ -96,7 +98,6 @@ export default function Skills() {
       width: "200px",
 
       height: "200px",
-      borderRadius: "10px",
       margin: "40px auto",
       display: "flex",
       justifyContent: "center",
@@ -114,7 +115,6 @@ export default function Skills() {
       width: "200px",
 
       height: "200px",
-      borderRadius: "10px",
       margin: "40px auto",
       display: "flex",
       justifyContent: "center",
@@ -131,7 +131,6 @@ export default function Skills() {
       background: "grey",
       width: "200px",
       height: "200px",
-      borderRadius: "10px",
       margin: "40px auto",
       display: "flex",
       justifyContent: "center",
@@ -150,7 +149,6 @@ export default function Skills() {
       width: "200px",
 
       height: "200px",
-      borderRadius: "10px",
       margin: "40px auto",
       display: "flex",
       justifyContent: "center",
@@ -168,7 +166,6 @@ export default function Skills() {
       width: "200px",
 
       height: "200px",
-      borderRadius: "10px",
       margin: "40px auto",
       display: "flex",
       justifyContent: "center",
@@ -185,7 +182,6 @@ export default function Skills() {
       background: "grey",
       width: "200px",
       height: "200px",
-      borderRadius: "10px",
       margin: "40px auto",
       display: "flex",
       justifyContent: "center",
@@ -202,7 +198,6 @@ export default function Skills() {
       background: "grey",
       width: "200px",
       height: "200px",
-      borderRadius: "10px",
       margin: "40px auto",
       display: "flex",
       justifyContent: "center",
@@ -219,7 +214,6 @@ export default function Skills() {
       background: "grey",
       width: "200px",
       height: "200px",
-      borderRadius: "10px",
       margin: "40px auto",
       display: "flex",
       justifyContent: "center",
@@ -235,7 +229,6 @@ export default function Skills() {
     clickView: {
       width: "400px",
       height: "400px",
-      borderRadius: "10px",
       margin: "0 auto",
       display: "flex",
       justifyContent: "center",
@@ -243,74 +236,105 @@ export default function Skills() {
       border: "5px solid #201c1c",
       boxShadow: "5px 5px 3px  #201c1c",
     },
+    containerText: {
+      height: "100%",
+      width: "50%",
+      color: "white",
+      left: "0",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      margin: "10px 10px 10px 10px",
+    },
   }))
   const classes = useStyles()
 
   return (
     <div
       style={{
-        background: "0e160e",
+        backgroundImage: `url(${Owl})`,
+        backgroundSize: "cover",
       }}
     >
       <h1 className={classes.headNote}>
         Skills <BuildIcon />
       </h1>
-      <div className={classes.containerMain1}>
-        <div
-          onClick={() => setclick(1)}
-          className={click === 1 ? classes.clickView : classes.containter1}
-        >
-          {click === 1 ? JavaScriptForm : ""}
-        </div>
-        <div
-          onClick={() => setclick(2)}
-          className={click === 2 ? classes.clickView : classes.containterReact}
-        >
-          {click === 2 ? ReactForm : ""}
-        </div>
-        <div
-          onClick={() => setclick(3)}
-          className={click === 3 ? classes.clickView : classes.containterCsharp}
-        >
-          {click === 3 ? CSharpForm : ""}
-        </div>
-        <div
-          onClick={() => setclick(5)}
-          className={
-            click === 5 ? classes.clickView : classes.containterGraphQl
-          }
-        >
-          {click === 5 ? GraphQLForm : ""}
-        </div>
-        <div
-          onClick={() => setclick(9)}
-          className={click === 9 ? classes.clickView : classes.containterApollo}
-        >
-          {click === 9 ? ApolloForm : ""}
-        </div>
-        <div
-          onClick={() => setclick(6)}
-          className={click === 6 ? classes.clickView : classes.containterSQL}
-        >
-          {click === 6 ? SQLForm : ""}
-        </div>
-        <div
-          onClick={() => setclick(4)}
-          className={click === 4 ? classes.clickView : classes.containerPHP}
-        >
-          {click === 4 ? PHPForm : ""}
-        </div>
-        <div
-          onClick={() => setclick(7)}
-          className={click === 7 ? classes.clickView : classes.containterCSS}
-        >
-          {click === 7 ? CSSForm : ""}
-        </div>
-        <div
-          onClick={() => setclick(8)}
-          className={click === 8 ? classes.clickView : classes.containterAWS}
-        >
-          {click === 8 ? AWSForm : ""}
+      <div
+        style={{
+          background: "transparent",
+
+          display: "flex",
+        }}
+      >
+        {isMobile > breakPoint ? (
+          <div className={classes.containerText}>{textForm}</div>
+        ) : (
+          ""
+        )}
+        <div className={classes.containerMain1}>
+          {isMobile < breakPoint ? textForm : ""}
+          <div
+            onClick={() => setclick(1)}
+            className={click === 1 ? classes.clickView : classes.containter1}
+          >
+            {click === 1 ? JavaScriptForm : ""}
+          </div>
+          <div
+            onClick={() => setclick(2)}
+            className={
+              click === 2 ? classes.clickView : classes.containterReact
+            }
+          >
+            {click === 2 ? ReactForm : ""}
+          </div>
+          <div
+            onClick={() => setclick(3)}
+            className={
+              click === 3 ? classes.clickView : classes.containterCsharp
+            }
+          >
+            {click === 3 ? CSharpForm : ""}
+          </div>
+          <div
+            onClick={() => setclick(5)}
+            className={
+              click === 5 ? classes.clickView : classes.containterGraphQl
+            }
+          >
+            {click === 5 ? GraphQLForm : ""}
+          </div>
+          <div
+            onClick={() => setclick(9)}
+            className={
+              click === 9 ? classes.clickView : classes.containterApollo
+            }
+          >
+            {click === 9 ? ApolloForm : ""}
+          </div>
+          <div
+            onClick={() => setclick(6)}
+            className={click === 6 ? classes.clickView : classes.containterSQL}
+          >
+            {click === 6 ? SQLForm : ""}
+          </div>
+          <div
+            onClick={() => setclick(4)}
+            className={click === 4 ? classes.clickView : classes.containerPHP}
+          >
+            {click === 4 ? PHPForm : ""}
+          </div>
+          <div
+            onClick={() => setclick(7)}
+            className={click === 7 ? classes.clickView : classes.containterCSS}
+          >
+            {click === 7 ? CSSForm : ""}
+          </div>
+          <div
+            onClick={() => setclick(8)}
+            className={click === 8 ? classes.clickView : classes.containterAWS}
+          >
+            {click === 8 ? AWSForm : ""}
+          </div>
         </div>
       </div>
     </div>

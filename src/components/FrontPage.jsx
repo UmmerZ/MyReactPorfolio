@@ -131,19 +131,25 @@ export default function FrontPage() {
         <span className={classes.bold}>
           IF <br />
         </span>
-        You want State of the Art UI
-        <span className={classes.bold2}>Hire Me!</span>
+        (You want State of the Art UI)
+        <span className={classes.bold2}>{"{Hire Me!};"}</span>
+        <br />
+        return;
         <br />
         <span className={classes.bold}>
           IF <br />
         </span>
-        You want server running at Lightning Speeds
-        <span className={classes.bold2}>Hire Me!</span> <br />
+        (You want server running at Lightning Speeds)
+        <span className={classes.bold2}>{"{Hire Me!};"}</span> <br />
+        return;
+        <br />
         <span className={classes.bold}>
           IF <br />
         </span>
-        You want to you Releational or Graph Databases
-        <span className={classes.bold2}>Hire Me!</span>
+        (You want Releational or Graph Databases designer)
+        <span className={classes.bold2}>{"{Hire Me!};"}</span>
+        <br />
+        return;
       </p>
     </div>
   )
