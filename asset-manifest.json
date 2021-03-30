@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/MyReactPortfolio/static/css/main.6e1eb64a.chunk.css",
-    "main.js": "/MyReactPortfolio/static/js/main.3373023a.chunk.js",
-    "main.js.map": "/MyReactPortfolio/static/js/main.3373023a.chunk.js.map",
+    "main.js": "/MyReactPortfolio/static/js/main.f5e2e5ed.chunk.js",
+    "main.js.map": "/MyReactPortfolio/static/js/main.f5e2e5ed.chunk.js.map",
     "runtime-main.js": "/MyReactPortfolio/static/js/runtime-main.f8bcdb04.js",
     "runtime-main.js.map": "/MyReactPortfolio/static/js/runtime-main.f8bcdb04.js.map",
     "static/js/2.c7e7d393.chunk.js": "/MyReactPortfolio/static/js/2.c7e7d393.chunk.js",
@@ -22,6 +22,7 @@
     "static/media/graphql.e3a02a8f.png": "/MyReactPortfolio/static/media/graphql.e3a02a8f.png",
     "static/media/js.4d11b7ee.jpg": "/MyReactPortfolio/static/media/js.4d11b7ee.jpg",
     "static/media/mushroom.87b317c7.jpg": "/MyReactPortfolio/static/media/mushroom.87b317c7.jpg",
+    "static/media/owl.1b4b5665.jpg": "/MyReactPortfolio/static/media/owl.1b4b5665.jpg",
     "static/media/php.60008588.png": "/MyReactPortfolio/static/media/php.60008588.png",
     "static/media/reactrs.ec15503f.jpg": "/MyReactPortfolio/static/media/reactrs.ec15503f.jpg",
     "static/media/sql.ad9eb45d.png": "/MyReactPortfolio/static/media/sql.ad9eb45d.png"
@@ -30,6 +31,6 @@
     "static/js/runtime-main.f8bcdb04.js",
     "static/js/2.c7e7d393.chunk.js",
     "static/css/main.6e1eb64a.chunk.css",
-    "static/js/main.3373023a.chunk.js"
+    "static/js/main.f5e2e5ed.chunk.js"
   ]
 }
