@@ -2,6 +2,7 @@ import { Button, makeStyles, Paper, TextField } from "@material-ui/core"
 import React, { useState } from "react"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
+import axios from "axios"
 
 export default function Contact() {
   const useStyles = makeStyles(theme => ({
@@ -45,27 +46,26 @@ export default function Contact() {
   const [phone, setphone] = useState("")
   const [emailMessage, setemailMessage] = useState("")
 
-  const handleSubmit = async e => {
+  function handleSubmit(e) {
     e.preventDefault()
-    setStatus("Sending...")
-
-    let details = {
-      firstName,
-      lastName,
-      email,
-      phone,
-      emailMessage,
-    }
-    console.log(details)
-    let response = await fetch("http://localhost:3000/contact", {
+    axios({
       method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(details),
+      url: "http://localhost:3006/send",
+      data: { firstName, lastName, email, phone, emailMessage },
+    }).then(response => {
+      if (response.data.status === "success") {
+        alert("Message Sent.")
+        setStatus("Message was sent")
+        setfirstName("")
+        setlastName("")
+        setphone("")
+        setemail("")
+        setemailMessage("")
+      } else if (response.data.status === "fail") {
+        alert("Message failed to send.")
+      }
+      console.log(response.data.status)
     })
-    console.log(response)
-    setStatus("Submit")
   }
 
   return (
