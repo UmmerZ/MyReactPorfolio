@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { makeStyles } from "@material-ui/core"
+import { makeStyles, Paper } from "@material-ui/core"
 import BuildIcon from "@material-ui/icons/Build"
 import ReactJsImage from "../images/Reactjs.png"
 import Owl from "../images/owl.jpg"
@@ -82,11 +82,6 @@ export default function Skills() {
       width: "200px",
       height: "200px",
       margin: "40px auto",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      border: "5px solid #201c1c",
-      boxShadow: "5px 5px 3px  #201c1c",
       backgroundImage: `url(${JsImage})`,
       backgroundSize: "cover",
       "&:hover": {
@@ -96,14 +91,9 @@ export default function Skills() {
     containterReact: {
       background: "grey",
       width: "200px",
-
+      opacity: ".5",
       height: "200px",
       margin: "40px auto",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      border: "5px solid #201c1c",
-      boxShadow: "5px 5px 3px  #201c1c",
       backgroundImage: `url(${ReactJsImage})`,
       backgroundSize: "cover",
       "&:hover": {
@@ -113,14 +103,9 @@ export default function Skills() {
     containterCsharp: {
       background: "grey",
       width: "200px",
-
+      opacity: ".5",
       height: "200px",
       margin: "40px auto",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      border: "5px solid #201c1c",
-      boxShadow: "5px 5px 3px  #201c1c",
       backgroundImage: `url(${CsharpImage})`,
       backgroundSize: "cover",
       "&:hover": {
@@ -129,17 +114,12 @@ export default function Skills() {
     },
     containterGraphQl: {
       background: "grey",
+      opacity: ".5",
       width: "200px",
       height: "200px",
       margin: "40px auto",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      border: "5px solid #201c1c",
-      boxShadow: "5px 5px 3px  #201c1c",
       backgroundImage: `url(${GraphQLImage})`,
       backgroundSize: "cover",
-
       "&:hover": {
         backgroundBlendMode: "multiply",
       },
@@ -147,14 +127,9 @@ export default function Skills() {
     containterApollo: {
       background: "grey",
       width: "200px",
-
+      opacity: ".5",
       height: "200px",
       margin: "40px auto",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      border: "5px solid #201c1c",
-      boxShadow: "5px 5px 3px  #201c1c",
       backgroundImage: `url(${ApolloImage})`,
       backgroundSize: "cover",
       "&:hover": {
@@ -164,14 +139,9 @@ export default function Skills() {
     containterSQL: {
       background: "grey",
       width: "200px",
-
+      opacity: ".5",
       height: "200px",
       margin: "40px auto",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      border: "5px solid #201c1c",
-      boxShadow: "5px 5px 3px  #201c1c",
       backgroundImage: `url(${sqlImage})`,
       backgroundSize: "cover",
       "&:hover": {
@@ -180,14 +150,10 @@ export default function Skills() {
     },
     containerPHP: {
       background: "grey",
+      opacity: ".5",
       width: "200px",
       height: "200px",
       margin: "40px auto",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      border: "5px solid #201c1c",
-      boxShadow: "5px 5px 3px  #201c1c",
       backgroundImage: `url(${PHPImage})`,
       backgroundSize: "cover",
       "&:hover": {
@@ -196,14 +162,10 @@ export default function Skills() {
     },
     containterCSS: {
       background: "grey",
+      opacity: ".5",
       width: "200px",
       height: "200px",
       margin: "40px auto",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      border: "5px solid #201c1c",
-      boxShadow: "5px 5px 3px  #201c1c",
       backgroundImage: `url(${CSSImagae})`,
       backgroundSize: "cover",
       "&:hover": {
@@ -212,14 +174,10 @@ export default function Skills() {
     },
     containterAWS: {
       background: "grey",
+      opacity: ".5",
       width: "200px",
       height: "200px",
       margin: "40px auto",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      border: "5px solid #201c1c",
-      boxShadow: "5px 5px 3px  #201c1c",
       backgroundImage: `url(${AWSImage})`,
       backgroundSize: "cover",
       "&:hover": {
@@ -245,6 +203,18 @@ export default function Skills() {
       alignItems: "center",
       justifyContent: "center",
       margin: "10px 10px 10px 10px",
+    },
+    paper: {
+      width: "100%",
+      marginTop: "160px",
+      position: "relative",
+      color: "#ffffff",
+      opacity: ".7",
+      background: "#0e160e",
+      padding: "10px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
     },
   }))
   const classes = useStyles()
@@ -277,6 +247,13 @@ export default function Skills() {
             className={click === 1 ? classes.clickView : classes.containter1}
           >
             {click === 1 ? JavaScriptForm : ""}
+            <div>
+              {click === 1 ? (
+                ""
+              ) : (
+                <Paper className={classes.paper}>JavaScript(ES6)</Paper>
+              )}
+            </div>
           </div>
           <div
             onClick={() => setclick(2)}
@@ -285,6 +262,13 @@ export default function Skills() {
             }
           >
             {click === 2 ? ReactForm : ""}
+            <div>
+              {click === 2 ? (
+                ""
+              ) : (
+                <Paper className={classes.paper}>React JS</Paper>
+              )}
+            </div>
           </div>
           <div
             onClick={() => setclick(3)}
@@ -293,6 +277,9 @@ export default function Skills() {
             }
           >
             {click === 3 ? CSharpForm : ""}
+            <div>
+              {click === 3 ? "" : <Paper className={classes.paper}>C#</Paper>}
+            </div>
           </div>
           <div
             onClick={() => setclick(5)}
@@ -301,6 +288,13 @@ export default function Skills() {
             }
           >
             {click === 5 ? GraphQLForm : ""}
+            <div>
+              {click === 5 ? (
+                ""
+              ) : (
+                <Paper className={classes.paper}>GraphQl</Paper>
+              )}
+            </div>
           </div>
           <div
             onClick={() => setclick(9)}
@@ -309,30 +303,49 @@ export default function Skills() {
             }
           >
             {click === 9 ? ApolloForm : ""}
+            <div>
+              {click === 9 ? (
+                ""
+              ) : (
+                <Paper className={classes.paper}>Apollo JS</Paper>
+              )}
+            </div>
           </div>
           <div
             onClick={() => setclick(6)}
             className={click === 6 ? classes.clickView : classes.containterSQL}
           >
             {click === 6 ? SQLForm : ""}
+            <div>
+              {click === 6 ? "" : <Paper className={classes.paper}>SQL</Paper>}
+            </div>
           </div>
           <div
             onClick={() => setclick(4)}
             className={click === 4 ? classes.clickView : classes.containerPHP}
           >
             {click === 4 ? PHPForm : ""}
+            <div>
+              {click === 4 ? "" : <Paper className={classes.paper}>PHP7</Paper>}
+            </div>
           </div>
           <div
             onClick={() => setclick(7)}
             className={click === 7 ? classes.clickView : classes.containterCSS}
           >
             {click === 7 ? CSSForm : ""}
+            <div>
+              {click === 7 ? "" : <Paper className={classes.paper}>CSS</Paper>}
+            </div>
           </div>
           <div
             onClick={() => setclick(8)}
             className={click === 8 ? classes.clickView : classes.containterAWS}
           >
             {click === 8 ? AWSForm : ""}
+            <div>
+              {click === 8 ? "" : <Paper className={classes.paper}>AWS</Paper>}
+            </div>
           </div>
         </div>
       </div>
