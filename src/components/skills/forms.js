@@ -292,8 +292,8 @@ export const projectTextForm = (
     <p style={h2}>
       I am always coding if I get some spare time I{" "}
       <span style={head}>CODE</span> <br />
-      I have learnt most of my skills while working on my personal projects they
-      do reflect my coding.
+      I have learnt most of my skills while working on my personal projects. I
+      love working on new new projects to learn new languages.
       <br />
       <span style={head}>
         Here are few of the ones I have created so far on personal side

@@ -146,7 +146,7 @@ export default function FrontPage() {
         <span className={classes.bold}>
           IF <br />
         </span>
-        (You want Releational or Graph Databases designer)
+        (You want database crafted to the needs)
         <span className={classes.bold2}>{"{Hire Me!};"}</span>
         <br />
         return;

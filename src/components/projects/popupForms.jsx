@@ -1,4 +1,3 @@
-
 const content2 = {
   display: "block",
   width: "100%",
@@ -70,64 +69,33 @@ export const goodReelsForm = (
     </ul>
   </div>
 )
-export const libraryForm = (
-  <div style={content2}>
-    <h2>GoodReels</h2>
-    <ul>
-      <h3>I worked on this project during my coding bootcamp</h3>
-      <h3>My Goals:</h3>
-      <ul>
-        <li>Create a Book Library Management system</li>
-        <li>
-          Keeping track of the quantity of a book, if borrowed reduces the
-          quantity anf if returned will increase the quantity
-        </li>
-        <li>Book can be issued to a user if he exists in the database.</li>
-        <li>
-          Once a book is issued the issue and return date is set by default.
-        </li>
-        <li>Return date could be extended by a click</li>
-      </ul>
-      <h3>Languages Used</h3>
-      <ul>
-        <li>C#/ASP.NET Core/MVC</li>
 
-        <li>MySQL for database</li>
-      </ul>
-      <p>
-        GithubLink:
-        <a href="https://github.com/UmmerZ/.NET_MVC_LIBRARY">Click Here</a>
-      </p>
-    </ul>
-  </div>
-)
-export const phpForm = (
+export const springChatForm = (
   <div style={content2}>
-    <h2>Cordinates Information</h2>
+    <h2>MERN-SpringChat-App</h2>
     <ul>
-      <h3>I worked on this project during my coding bootcamp</h3>
       <h3>My Goals:</h3>
       <ul>
         <li>
-          Create a application using an API to retrive the cordinate information
-          by entering any latitude and longtitude
+          Create a messenger app to enhance up my skills in MERN and GraphQl
         </li>
-        <li>
-          As a feature used another API to diaplay random facts about any year
-          in history by entering the year
-        </li>
+        <li>Adding voice and video room in future</li>
       </ul>
       <h3>Languages Used</h3>
       <ul>
-        <li>PHP7</li>
-
-        <li>MExternal API's</li>
+        <li>React JS/Material-UI</li>
+        <li>Express JS</li>
+        <li>Node JS</li>
+        <li>GrapQL/Apollo</li>
+        <li>Mongodb</li>
       </ul>
+      <h3>
+        The application has been deployed using client side on Netlify, server
+        on Heroku and Mongodb Atlas.
+      </h3>
       <p>
-        GithubLink:
-        <a href="https://github.com/UmmerZ/PHP_API_GUESSING_GAME_CORDINATE_INFO">
-          Click Here
-        </a>
+        URL:
+        <a href="https://mystifying-sammet-5a863a.netlify.app/">Click Here</a>
       </p>
     </ul>
   </div>

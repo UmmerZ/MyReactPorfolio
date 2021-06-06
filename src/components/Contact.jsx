@@ -8,6 +8,7 @@ export default function Contact() {
   const useStyles = makeStyles(theme => ({
     container: {
       display: "flex",
+      flexWrap: "wrap",
       maxWidth: "40em",
       height: "40em",
       background: "#BDBDBD",

@@ -91,7 +91,6 @@ export default function Skills() {
     containterReact: {
       background: "grey",
       width: "200px",
-      opacity: ".5",
       height: "200px",
       margin: "40px auto",
       backgroundImage: `url(${ReactJsImage})`,
@@ -103,7 +102,6 @@ export default function Skills() {
     containterCsharp: {
       background: "grey",
       width: "200px",
-      opacity: ".5",
       height: "200px",
       margin: "40px auto",
       backgroundImage: `url(${CsharpImage})`,
@@ -114,7 +112,6 @@ export default function Skills() {
     },
     containterGraphQl: {
       background: "grey",
-      opacity: ".5",
       width: "200px",
       height: "200px",
       margin: "40px auto",
@@ -127,7 +124,6 @@ export default function Skills() {
     containterApollo: {
       background: "grey",
       width: "200px",
-      opacity: ".5",
       height: "200px",
       margin: "40px auto",
       backgroundImage: `url(${ApolloImage})`,
@@ -139,7 +135,6 @@ export default function Skills() {
     containterSQL: {
       background: "grey",
       width: "200px",
-      opacity: ".5",
       height: "200px",
       margin: "40px auto",
       backgroundImage: `url(${sqlImage})`,
@@ -150,7 +145,6 @@ export default function Skills() {
     },
     containerPHP: {
       background: "grey",
-      opacity: ".5",
       width: "200px",
       height: "200px",
       margin: "40px auto",
@@ -162,7 +156,6 @@ export default function Skills() {
     },
     containterCSS: {
       background: "grey",
-      opacity: ".5",
       width: "200px",
       height: "200px",
       margin: "40px auto",
@@ -174,7 +167,6 @@ export default function Skills() {
     },
     containterAWS: {
       background: "grey",
-      opacity: ".5",
       width: "200px",
       height: "200px",
       margin: "40px auto",

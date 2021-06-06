@@ -1,12 +1,15 @@
 import { makeStyles, Paper } from "@material-ui/core"
 import React, { useState } from "react"
 import Bid from "../images/bidacar.jpg"
+import Bid2 from "../images/Bid2.jpg"
 import goodReels from "../images/goodreels.jpg"
 import cSharp from "../images/cSharp.jpg"
 import reactImage from "../images/reactrs.jpg"
 import aspDotNetImage from "../images/asp.jpg"
 import phpImage from "../images/php.png"
-import { bidACarForm, goodReelsForm, libraryForm, phpForm } from "./popupForms"
+import SpringChatImage from "../images/SpringChat.jpg"
+import SpringLoginImage from "../images/SpringLogin.jpg"
+import { bidACarForm, goodReelsForm, springChatForm } from "./popupForms"
 import Fox from "../images/fox.jpg"
 import { projectTextForm } from "../skills/forms"
 import { useAuth } from "../../Context"
@@ -40,21 +43,20 @@ export default function Projects() {
     },
     containter1: {
       background: "grey",
-      opacity: ".5",
+
       width: "200px",
       height: "200px",
       margin: "40px auto",
-      backgroundImage: `url(${cSharp})`,
+      backgroundImage: `url(${SpringLoginImage})`,
       backgroundSize: "cover",
       "&:hover": {
-        backgroundImage: `url(${Bid})`,
+        backgroundImage: `url(${SpringChatImage})`,
         backgroundSize: "cover",
         backgroundBlendMode: "multiply",
       },
     },
     containter2: {
       background: "grey",
-      opacity: ".5",
       width: "200px",
       height: "200px",
       margin: "40px auto",
@@ -67,16 +69,18 @@ export default function Projects() {
     },
     containter3: {
       background: "grey",
-      opacity: ".5",
       width: "200px",
       height: "200px",
       margin: "40px auto",
-      backgroundImage: `url(${aspDotNetImage})`,
+      backgroundImage: `url(${Bid})`,
       backgroundSize: "cover",
+      "&:hover": {
+        backgroundImage: `url(${Bid2})`,
+        backgroundSize: "cover",
+      },
     },
     containter4: {
       background: "grey",
-      opacity: ".5",
       width: "200px",
       height: "200px",
       margin: "40px auto",
@@ -139,12 +143,12 @@ export default function Projects() {
             className={click === 1 ? classes.clickView : classes.containter1}
             onClick={() => setclick(1)}
           >
-            {click === 1 ? bidACarForm : ""}
+            {click === 1 ? springChatForm : ""}
             <div>
               {click === 1 ? (
                 ""
               ) : (
-                <Paper className={classes.paper}>Bid-A-Car</Paper>
+                <Paper className={classes.paper}>SpringChat(MERN)</Paper>
               )}
             </div>
           </div>
@@ -167,25 +171,12 @@ export default function Projects() {
             className={click === 3 ? classes.clickView : classes.containter3}
             onClick={() => setclick(3)}
           >
-            {click === 3 ? libraryForm : ""}
+            {click === 3 ? bidACarForm : ""}
             <div>
               {click === 3 ? (
                 ""
               ) : (
-                <Paper className={classes.paper}>Library Management</Paper>
-              )}
-            </div>
-          </div>
-          <div
-            className={click === 4 ? classes.clickView : classes.containter4}
-            onClick={() => setclick(4)}
-          >
-            {click === 4 ? phpForm : ""}
-            <div>
-              {click === 4 ? (
-                ""
-              ) : (
-                <Paper className={classes.paper}>Corinates Information</Paper>
+                <Paper className={classes.paper}>Bid-A-Car</Paper>
               )}
             </div>
           </div>
