@@ -62,8 +62,9 @@ export const goodReelsForm = (
 
         <li>Redux for state management</li>
       </ul>
+      <p>This website has been deployed using Netlify</p>
       <p>
-        GithubLink:
+        Website link:
         <a href="https://github.com/UmmerZ/GoodReels">Click Here</a>
       </p>
     </ul>
@@ -94,7 +95,7 @@ export const springChatForm = (
         on Heroku and Mongodb Atlas.
       </h3>
       <p>
-        URL:
+        Website link:
         <a href="https://mystifying-sammet-5a863a.netlify.app/">Click Here</a>
       </p>
     </ul>

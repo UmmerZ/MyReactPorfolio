@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { makeStyles } from "@material-ui/core"
 import mushroom from "./images/mushroom.jpg"
 import { useAuth } from "../Context"
+import { ControlCameraTwoTone } from "@material-ui/icons"
 export default function FrontPage() {
   const [swap, setswap] = useState(0)
   const { isMobile } = useAuth()
@@ -101,6 +102,7 @@ export default function FrontPage() {
       position: "absolute",
     },
   }))
+
   const classes = useStyle()
   const bioDefaultForm = (
     <div
